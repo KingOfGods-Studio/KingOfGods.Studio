@@ -1,0 +1,3407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+/*(1)(S)💥(End Root)💥(S)(1)*/
+:root{
+--stage-desktop:980px;
+--stageh-desktop:1199px;
+--stage-mobile:320px;
+--stageh-mobile:539px;
+--stageh:var(--stageh-desktop);
+--stage:var(--stage-desktop);
+--hf-desktop:60px;
+--hf-mobile:40px;
+--hf:var(--hf-desktop);
+--bp-mobile:520px;
+--KingOfGods-scale:1;
+--ratio-desktop:1.2234693878;
+--ratio-mobile:1.684375;
+--t1:#39ff14;
+--t2:#00ff8a;
+--primary:var(--t1);
+--accent:var(--t2);
+--bg-1:#051a05;
+--bg-2:#0a2b0a;
+--rim:#006400;
+--panel:rgba(0,20,0,.6);
+}
+@media (max-width:520px){
+:root{
+--stage:var(--stage-mobile);
+--stageh:var(--stageh-mobile);
+--hf:var(--hf-mobile);
+}
+}
+body.KingOfGods-invert-theme{
+--primary:var(--t2);
+--accent:var(--t1);
+}
+/*(1)(E)💥(End Root)💥(E)(1)*/
+/*(2)(S)🤬(THEME ENGINE)🤬(S)(2)*/
+/*-🎨(#1)(TOXIC)🎨-*/
+body.KingOfGods-theme-toxic{
+--t1:#39ff14;
+--t2:#00ff8a;
+--bg-1:#051a05;
+--bg-2:#0a2b0a;
+--rim:#006400;
+--panel:rgba(0,20,0,.6);
+}
+/*-🎨(#2)(CARDINAL GOLD)🎨-*/
+body.KingOfGods-theme-cyber{
+--t1:#A50034;
+--t2:#FFB400;
+--bg-1:#120006;
+--bg-2:#25000f;
+--rim:#5a001f;
+--panel:rgba(24,0,10,.7);
+}
+/*-🎨(#3)(NAVY ORANGE)🎨-*/
+body.KingOfGods-theme-gold{
+--t1:#003A70;
+--t2:#FC4C02;
+--bg-1:#020b18;
+--bg-2:#061a34;
+--rim:#053a7a;
+--panel:rgba(0,10,24,.66);
+}
+/*-🎨(#4)(OLIVE GOLD)🎨-*/
+body.KingOfGods-theme-neon{
+--t1:#6B8E23;
+--t2:#FFD700;
+--bg-1:#0b1003;
+--bg-2:#162006;
+--rim:#3a4d12;
+--panel:rgba(10,18,0,.66);
+}
+/*🎨-(#5)(CRIMSON ROYAL)🎨-*/
+body.KingOfGods-theme-lava{
+--t1:#C8102E;
+--t2:#1C3F94;
+--bg-1:#120204;
+--bg-2:#220408;
+--rim:#4a0000;
+--panel:rgba(20,0,0,.72);
+}
+/*-🎨(#6)(STEEL RED)🎨-*/
+body.KingOfGods-theme-ice{
+--t1:#4B92DB;
+--t2:#D50032;
+--bg-1:#04101a;
+--bg-2:#061e33;
+--rim:#005c8a;
+--panel:rgba(0,12,24,.62);
+}
+/*-🎨(#7)(BURGUNDY YELLOW)🎨-*/
+body.KingOfGods-theme-matrix{
+--t1:#A51C30;
+--t2:#FFC300;
+--bg-1:#120204;
+--bg-2:#2a0508;
+--rim:#6a0010;
+--panel:rgba(26,0,10,.72);
+}
+/*-🎨(#8)(GREEN ORANGE)🎨-*/
+body.KingOfGods-theme-royal{
+--t1:#007A33;
+--t2:#FFA300;
+--bg-1:#020b06;
+--bg-2:#06160c;
+--rim:#004d1f;
+--panel:rgba(0,20,6,.7);
+}
+/*-🎨(#9)(TAN RED)🎨-*/
+body.KingOfGods-theme-sunset{
+--t1:#E0BF63;
+--t2:#A50034;
+--bg-1:#140f00;
+--bg-2:#2a1a00;
+--rim:#7a4a00;
+--panel:rgba(24,14,0,.68);
+}
+/*-🎨(#10)(GRAY CRIMSON)🎨-*/
+body.KingOfGods-theme-pink{
+--t1:#B2B2B2;
+--t2:#DD2A2A;
+--bg-1:#0e0f10;
+--bg-2:#191b1d;
+--rim:#3b3b44;
+--panel:rgba(18,18,18,.72);
+}
+/*-🎨(#11)(YELLOW SLATE)🎨-*/
+body.KingOfGods-theme-void{
+--t1:#FFD500;
+--t2:#005B96;
+--bg-1:#0a0900;
+--bg-2:#171300;
+--rim:#7a4a00;
+--panel:rgba(24,14,0,.68);
+}
+/*-🎨(#12)(VIOLET GOLD)🎨-*/
+body.KingOfGods-theme-slate{
+--t1:#C71585;
+--t2:#FFD700;
+--bg-1:#120015;
+--bg-2:#24002a;
+--rim:#7a007a;
+--panel:rgba(20,0,24,.64);
+}
+/*-🎨(#13)(FIREBRICK GREEN)🎨-*/
+body.KingOfGods-theme-blood{
+--t1:#B22234;
+--t2:#1F8A4D;
+--bg-1:#120204;
+--bg-2:#2a0508;
+--rim:#4a0000;
+--panel:rgba(20,0,0,.78);
+}
+/*-🎨(#14)(BOLT ORANGE)🎨-*/
+body.KingOfGods-theme-copper{
+--t1:#005EB8;
+--t2:#FF6F00;
+--bg-1:#041018;
+--bg-2:#072235;
+--rim:#0a3a66;
+--panel:rgba(0,12,20,.72);
+}
+/*-🎨(#15)(ROSE TEAL)🎨-*/
+body.KingOfGods-theme-ocean{
+--t1:#C9A2B1;
+--t2:#003E5B;
+--bg-1:#050a0f;
+--bg-2:#0a141d;
+--rim:#053a4a;
+--panel:rgba(0,10,18,.68);
+}
+/*-🎨(#16)(RED SILVER)🎨-*/
+body.KingOfGods-theme-amber{
+--t1:#D50000;
+--t2:#C0C0C0;
+--bg-1:#120000;
+--bg-2:#240000;
+--rim:#5a0010;
+--panel:rgba(22,0,0,.76);
+}
+/*-🎨(#17)(BROWN YELLOW)🎨-*/
+body.KingOfGods-theme-frost{
+--t1:#A52A2A;
+--t2:#FFFF00;
+--bg-1:#120204;
+--bg-2:#240408;
+--rim:#6a0010;
+--panel:rgba(22,0,0,.74);
+}
+/*-🎨(#18)(SEA GOLD)🎨-*/
+body.KingOfGods-theme-radio{
+--t1:#2E8B57;
+--t2:#FFD700;
+--bg-1:#04100a;
+--bg-2:#072016;
+--rim:#0a3a2a;
+--panel:rgba(0,18,10,.7);
+}
+/*-🎨(#19)(DARK BROWN AMBER)🎨-*/
+body.KingOfGods-theme-rose{
+--t1:#3E2723;
+--t2:#FFAB00;
+--bg-1:#120700;
+--bg-2:#241000;
+--rim:#7a3a00;
+--panel:rgba(22,10,0,.72);
+}
+/*-🎨(#20)(GREEN ORANGE)🎨-*/
+body.KingOfGods-theme-ultra{
+--t1:#4E8C31;
+--t2:#F57F20;
+--bg-1:#071002;
+--bg-2:#0f2006;
+--rim:#2a4d12;
+--panel:rgba(10,18,0,.66);
+}
+/*-🎨(#21)(PURPLE AMBER)🎨-*/
+body.KingOfGods-theme-titan{
+--t1:#5D3B95;
+--t2:#FFC107;
+--bg-1:#0a0014;
+--bg-2:#17002a;
+--rim:#2b0a66;
+--panel:rgba(16,0,26,.7);
+}
+/*-(2)(E)🤬(THEME ENGINE)🤬(E)(2)-*/
+</style>
+<style>
+/*-(3)(S)🤬(TITAN SCALE)🤬(S)(3)-*/
+body.KingOfGods-titan-scale #KingOfGods-shell{
+  font-size:calc(16px * var(--KingOfGods-scale));
+}
+body.KingOfGods-titan-scale #KingOfGods-shell #KingOfGods-fs-toggle,
+body.KingOfGods-titan-scale #KingOfGods-shell #KingOfGods-menu-toggle{
+  width:clamp(44px,calc(44px * var(--KingOfGods-scale)),60px);
+  height:clamp(44px,calc(44px * var(--KingOfGods-scale)),60px);
+  flex:0 0 clamp(44px,calc(44px * var(--KingOfGods-scale)),60px);
+}
+body.KingOfGods-titan-scale #KingOfGods-shell .KingOfGods-tv-shape{
+  width:clamp(16px,calc(16px * var(--KingOfGods-scale)),24px);
+  height:clamp(12px,calc(12px * var(--KingOfGods-scale)),18px);
+}
+body.KingOfGods-titan-scale #KingOfGods-shell .KingOfGods-tv-shape::before{
+  width:clamp(8px,calc(8px * var(--KingOfGods-scale)),12px);
+  height:clamp(3px,calc(3px * var(--KingOfGods-scale)),5px);
+  margin-left:calc(clamp(8px,calc(8px * var(--KingOfGods-scale)),12px) / -2);
+  top:calc(clamp(12px,calc(12px * var(--KingOfGods-scale)),18px) * -0.42);
+}
+body.KingOfGods-titan-scale #KingOfGods-shell .KingOfGods-line{
+  width:clamp(20px,calc(20px * var(--KingOfGods-scale)),30px);
+  height:clamp(2px,calc(2px * var(--KingOfGods-scale)),3px);
+}
+body.KingOfGods-titan-scale #KingOfGods-shell .KingOfGods-title{
+  font-size:clamp(18px,calc(18px * var(--KingOfGods-scale)),28px);
+  height:clamp(44px,calc(44px * var(--KingOfGods-scale)),60px);
+  padding:0 clamp(15px,calc(15px * var(--KingOfGods-scale)),30px);
+}
+body.KingOfGods-titan-scale #KingOfGods-shell .KingOfGods-hud-module{
+  font-size:clamp(11px,calc(11px * var(--KingOfGods-scale)),18px);
+  height:clamp(36px,calc(36px * var(--KingOfGods-scale)),52px);
+}
+body.KingOfGods-titan-scale #KingOfGods-shell #KingOfGods-footer-center{
+  font-size:clamp(14px,calc(14px * var(--KingOfGods-scale)),22px);
+}
+body.KingOfGods-titan-scale #KingOfGods-shell #KingOfGods-footer-date{
+  width:clamp(80px,calc(80px * var(--KingOfGods-scale)),140px);
+  flex:0 0 clamp(80px,calc(80px * var(--KingOfGods-scale)),140px);
+}
+body.KingOfGods-titan-scale #KingOfGods-shell #KingOfGods-clock-display{
+  width:clamp(80px,calc(80px * var(--KingOfGods-scale)),160px);
+  flex:0 0 clamp(80px,calc(80px * var(--KingOfGods-scale)),160px);
+}
+body.KingOfGods-titan-scale #KingOfGods-shell .KingOfGods-drawer-item,
+body.KingOfGods-titan-scale #KingOfGods-shell .KingOfGods-drawer-acc-btn{
+  font-size:clamp(14px,calc(14px * var(--KingOfGods-scale)),18px);
+  padding:clamp(14px,calc(14px * var(--KingOfGods-scale)),22px) clamp(12px,calc(12px * var(--KingOfGods-scale)),20px);
+}
+body.KingOfGods-titan-scale #KingOfGods-shell .KingOfGods-drawer-subitem{
+  font-size:clamp(13px,calc(13px * var(--KingOfGods-scale)),17px);
+  padding:clamp(12px,calc(12px * var(--KingOfGods-scale)),20px) clamp(10px,calc(10px * var(--KingOfGods-scale)),18px);
+}
+/*(3)(E)🤬(TITAN SCALE)🤬(E)(3)*/
+</style>
+<style>
+/*(4)(S)🤬(GLOBAL RESET)🤬(S)(4)*/
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;outline:none;}
+*:focus-visible{outline:2px solid var(--primary);outline-offset:-2px;}
+html,body{margin:0;padding:0;width:100%;height:100%;background:#050505;color:var(--primary);-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+body{
+--primary:var(--t1);
+--accent:var(--t2);
+font-family:'Share Tech Mono',monospace;
+transition:color .4s ease,background-color .4s ease,font-size .3s ease;
+user-select:none;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+text-rendering:geometricPrecision;
+}
+#KingOfGods-shell{
+  width:100%;
+  max-width:var(--stage);
+  margin:0 auto;
+  overflow:visible;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  height:auto;
+  min-height:calc(var(--stageh) + (var(--hf) * 2));
+}
+/* 🔧 FIXED: Stable fullscreen calculations */
+html.KingOfGods-fullscreen,
+body.KingOfGods-fullscreen{
+  overflow:hidden;
+  width:100%;
+  height:100%;
+  overscroll-behavior:none;
+  position:fixed;
+}
+
+body.KingOfGods-fullscreen #KingOfGods-shell{
+  max-width:none;
+  width:100%;
+  height:100svh;
+  position:fixed;
+  inset:0;
+  margin:0;
+  contain:layout style paint;
+}
+
+/* 🔧 FIXED: Stable non-fullscreen calculations */
+body:not(.KingOfGods-fullscreen){
+  --avail-h:calc(100svh - (var(--hf) * 2));
+  --stage:min(100vw, var(--stage-desktop), calc(var(--avail-h) / var(--ratio-desktop)));
+  --stageh:calc(var(--stage) * var(--ratio-desktop));
+}
+
+@media (max-width:520px){
+  body:not(.KingOfGods-fullscreen){
+    --avail-h:calc(100svh - (var(--hf-mobile) * 2));
+    --stage:min(100vw, var(--stage-mobile), calc(var(--avail-h) / var(--ratio-mobile)));
+    --stageh:calc(var(--stage) * var(--ratio-mobile));
+  }
+}
+
+/* 🔧 FIXED: Stable fullscreen calculations */
+body.KingOfGods-fullscreen{
+  --avail-h:calc(100svh - (var(--hf) * 2));
+  --stage:min(calc(var(--avail-h) / var(--ratio-desktop)), 100vw);
+  --stageh:calc(var(--stage) * var(--ratio-desktop));
+}
+
+@media (max-width:520px){
+  body.KingOfGods-fullscreen{
+    --avail-h:calc(100svh - (var(--hf-mobile) * 2));
+    --stage:min(calc(var(--avail-h) / var(--ratio-mobile)), 100vw);
+    --stageh:calc(var(--stage) * var(--ratio-mobile));
+  }
+}
+/*(4)(E)🤬(GLOBAL RESET)🤬(E)(4)*/
+</style>
+<style>
+/*(5)(S)🤬(SAFE MODE)🤬(S)(5)*/
+body.KingOfGods-ui-locked .KingOfGods-theme-lock{
+cursor:not-allowed!important;
+opacity:.7;
+pointer-events:none;
+}
+body.KingOfGods-ui-locked .KingOfGods-theme-lock:hover{
+box-shadow:none!important;
+background:rgba(0,0,0,.6)!important;
+color:var(--primary)!important;
+}
+/*(5)(E)🤬(SAFE MODE)🤬(E)(5)*/
+</style>
+<style>
+/*(6)(S)🤬(BACKGROUND)🤬(S)(6)*/
+#KingOfGods-forge-rim{
+position:absolute;
+inset:0;
+border:4px solid var(--rim);
+box-shadow:inset 0 0 50px rgba(0,0,0,.8);
+z-index:0;
+pointer-events:none;
+transition:border-color .4s ease;
+overflow:hidden;
+}
+#KingOfGods-lava-pit{
+position:absolute;
+inset:0;
+opacity:var(--bg-opacity,.45);
+background:
+repeating-linear-gradient(var(--bg-angle,45deg),
+var(--bg-1) 0,
+var(--bg-1) 12px,
+var(--bg-2) 12px,
+var(--bg-2) 28px),
+radial-gradient(circle at 20% 15%, rgba(255,255,255,.08), transparent 55%),
+radial-gradient(circle at 80% 85%, rgba(0,0,0,.35), transparent 60%);
+animation:heat var(--bg-speed,30s) linear infinite;
+will-change:background-position,filter,transform;
+transform:translate3d(0,0,0);
+filter:saturate(1.06) contrast(1.06);
+}
+#KingOfGods-lava-pit::after{
+content:'';
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 35%, rgba(0,0,0,var(--bg-vignette,.55)) 100%),
+repeating-linear-gradient(calc(var(--bg-angle,45deg) + 18deg),
+transparent 0,
+transparent 18px,
+rgba(0,0,0,.22) 18px,
+rgba(0,0,0,.22) 30px),
+radial-gradient(circle at 50% 50%, rgba(255,255,255,var(--bg-pulse,.06)), transparent 60%);
+mix-blend-mode:overlay;
+animation:heat calc(var(--bg-speed,30s) * 2) linear infinite reverse, pulse 6s ease-in-out infinite;
+will-change:background-position,opacity;
+}
+#KingOfGods-lava-pit::before{
+content:'';
+position:absolute;
+inset:-20%;
+background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+opacity:var(--bg-grain,.08);
+mix-blend-mode:soft-light;
+pointer-events:none;
+transform:translate3d(0,0,0);
+animation:grain 10s steps(6) infinite;
+}
+#KingOfGods-forge-rim::before{
+content:'';
+position:absolute;
+inset:0;
+pointer-events:none;
+background:
+radial-gradient(circle at 25% 20%, rgba(255,255,255,.06), transparent 55%),
+radial-gradient(circle at 75% 80%, rgba(0,0,0,.35), transparent 60%),
+linear-gradient(135deg,var(--t1) 0%, transparent 45%, var(--t2) 100%);
+mix-blend-mode:screen;
+opacity:var(--bg-tint,.22);
+filter:saturate(1.18);
+}
+#KingOfGods-forge-rim::after{
+content:'';
+position:absolute;
+inset:-10%;
+pointer-events:none;
+background:
+radial-gradient(circle at 20% 80%, var(--t2) 0%, transparent 55%),
+radial-gradient(circle at 80% 20%, var(--t1) 0%, transparent 55%);
+mix-blend-mode:overlay;
+opacity:var(--bg-split,.14);
+filter:blur(6px) saturate(1.25);
+}
+@keyframes heat{0%{background-position:0 0;}100%{background-position:240px 240px;}}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.78;}}
+@keyframes grain{
+0%{transform:translate3d(-2%,-2%,0) scale(1.02);}
+25%{transform:translate3d(2%,-1%,0) scale(1.02);}
+50%{transform:translate3d(1%,2%,0) scale(1.02);}
+75%{transform:translate3d(-1%,1%,0) scale(1.02);}
+100%{transform:translate3d(-2%,-2%,0) scale(1.02);}
+}
+#KingOfGods-header,#KingOfGods-stagewrap,#KingOfGods-footer{position:relative;z-index:2;}
+/*(6)(E)🤬(BACKGROUND)🤬(E)(6)*/
+</style>
+<style>
+/*(7)(S)🤬(PARTICLES)🤬(S)(7)*/
+#KingOfGods-shell #KingOfGods-ember-container{
+position:absolute;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+z-index:1;
+}
+#KingOfGods-shell .KingOfGods-ember{
+position:absolute;
+bottom:-10px;
+left:var(--x);
+width:var(--size);
+height:var(--size);
+animation-delay:var(--del);
+will-change:transform,opacity,filter;
+transition:filter .4s ease,opacity .4s ease;
+border-radius:var(--p-shape,999px);
+background:var(--t1);
+box-shadow:0 0 10px var(--t1),0 0 22px rgba(0,0,0,.0),0 0 34px rgba(0,0,0,.35);
+filter:saturate(1.25) contrast(1.08);
+}
+#KingOfGods-shell .KingOfGods-ember2{
+position:absolute;
+bottom:-10px;
+left:var(--x2,var(--x));
+width:calc(var(--size) * var(--p2-scale,1.05));
+height:calc(var(--size) * var(--p2-scale,1.05));
+animation-delay:calc(var(--del) + var(--p2-delay,0.12s));
+will-change:transform,opacity,filter;
+transition:filter .4s ease,opacity .4s ease;
+border-radius:var(--p2-shape,var(--p-shape,999px));
+background:var(--t2);
+box-shadow:0 0 10px var(--t2),0 0 22px rgba(0,0,0,.0),0 0 36px rgba(0,0,0,.35);
+filter:saturate(1.3) contrast(1.08);
+mix-blend-mode:screen;
+}
+#KingOfGods-shell .KingOfGods-ember::after{
+content:'';
+position:absolute;
+left:50%;
+top:50%;
+width:42%;
+height:42%;
+transform:translate(-50%,-50%);
+border-radius:999px;
+background:var(--t1);
+box-shadow:0 0 10px var(--t1);
+opacity:.95;
+pointer-events:none;
+}
+#KingOfGods-shell .KingOfGods-ember2::after{
+content:'';
+position:absolute;
+left:50%;
+top:50%;
+width:42%;
+height:42%;
+transform:translate(-50%,-50%);
+border-radius:999px;
+background:var(--t2);
+box-shadow:0 0 10px var(--t2);
+opacity:.95;
+pointer-events:none;
+}
+#KingOfGods-shell .KingOfGods-ember{animation:rise var(--dur) linear infinite;opacity:var(--p-alpha,.92);}
+#KingOfGods-shell .KingOfGods-ember2{animation:rise2 var(--dur2,var(--dur)) linear infinite;opacity:var(--p2-alpha,.85);}
+body.KingOfGods-theme-ice #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-void #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-slate #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-cyber #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-royal #KingOfGods-shell .KingOfGods-ember{
+border-radius:var(--p-shape,1px);
+animation:rise-ice var(--dur) linear infinite;
+opacity:var(--p-alpha,.86);
+}
+body.KingOfGods-theme-ice #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-void #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-slate #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-cyber #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-royal #KingOfGods-shell .KingOfGods-ember2{
+border-radius:var(--p2-shape,1px);
+animation:rise2-ice var(--dur2,var(--dur)) linear infinite;
+opacity:var(--p2-alpha,.78);
+}
+body.KingOfGods-theme-toxic #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-matrix #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-neon #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-radio #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-ultra #KingOfGods-shell .KingOfGods-ember{
+border-radius:var(--p-shape,999px);
+animation:rise-toxic var(--dur) ease-in-out infinite;
+opacity:var(--p-alpha,.92);
+}
+body.KingOfGods-theme-toxic #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-matrix #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-neon #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-radio #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-ultra #KingOfGods-shell .KingOfGods-ember2{
+border-radius:var(--p2-shape,999px);
+animation:rise2-toxic var(--dur2,var(--dur)) ease-in-out infinite;
+opacity:var(--p2-alpha,.82);
+}
+body.KingOfGods-theme-lava #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-gold #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-sunset #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-blood #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-pink #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-rose #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-amber #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-copper #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-ocean #KingOfGods-shell .KingOfGods-ember,
+body.KingOfGods-theme-frost #KingOfGods-shell .KingOfGods-ember{
+border-radius:var(--p-shape,999px);
+animation:rise var(--dur) linear infinite;
+opacity:var(--p-alpha,.9);
+}
+body.KingOfGods-theme-lava #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-gold #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-sunset #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-blood #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-pink #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-rose #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-amber #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-copper #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-ocean #KingOfGods-shell .KingOfGods-ember2,
+body.KingOfGods-theme-frost #KingOfGods-shell .KingOfGods-ember2{
+border-radius:var(--p2-shape,999px);
+animation:rise2 var(--dur2,var(--dur)) linear infinite;
+opacity:var(--p2-alpha,.82);
+}
+@keyframes rise{
+0%{opacity:0;transform:translateY(0) scale(.62);}
+18%{opacity:var(--p-alpha,.92);}
+100%{opacity:0;transform:translateY(-110vh) scale(0);}
+}
+@keyframes rise2{
+0%{opacity:0;transform:translateY(0) scale(.78);}
+18%{opacity:var(--p2-alpha,.85);}
+100%{opacity:0;transform:translateY(-110vh) scale(0);}
+}
+@keyframes rise-ice{
+0%{opacity:0;transform:translateX(0) translateY(0) rotate(45deg) scale(.62);}
+25%{opacity:var(--p-alpha,.86);transform:translateX(14px) translateY(-25vh) rotate(90deg) scale(.95);}
+75%{transform:translateX(-14px) translateY(-75vh) rotate(180deg) scale(.95);}
+100%{opacity:0;transform:translateX(0) translateY(-110vh) rotate(225deg) scale(0);}
+}
+@keyframes rise2-ice{
+0%{opacity:0;transform:translateX(0) translateY(0) rotate(0deg) scale(.78);}
+25%{opacity:var(--p2-alpha,.78);transform:translateX(-16px) translateY(-22vh) rotate(60deg) scale(1.02);}
+75%{transform:translateX(16px) translateY(-78vh) rotate(140deg) scale(1.02);}
+100%{opacity:0;transform:translateX(0) translateY(-110vh) rotate(200deg) scale(0);}
+}
+@keyframes rise-toxic{
+0%{opacity:0;transform:translateX(0) translateY(0) scale(.62);}
+25%{opacity:var(--p-alpha,.92);transform:translateX(var(--wob)) translateY(-30vh) scale(1.05);}
+50%{opacity:calc(var(--p-alpha,.92) * .78);transform:translateX(calc(var(--wob)*-1)) translateY(-60vh) scale(.9);}
+75%{transform:translateX(var(--wob)) translateY(-90vh) scale(.7);}
+100%{opacity:0;transform:translateX(0) translateY(-110vh) scale(0);}
+}
+@keyframes rise2-toxic{
+0%{opacity:0;transform:translateX(0) translateY(0) scale(.78);}
+25%{opacity:var(--p2-alpha,.82);transform:translateX(calc(var(--wob)*-1.2)) translateY(-26vh) scale(1.08);}
+50%{opacity:calc(var(--p2-alpha,.82) * .75);transform:translateX(var(--wob)) translateY(-58vh) scale(.92);}
+75%{transform:translateX(calc(var(--wob)*-1.2)) translateY(-92vh) scale(.72);}
+100%{opacity:0;transform:translateX(0) translateY(-110vh) scale(0);}
+}
+@media (prefers-reduced-motion: reduce){
+#KingOfGods-shell #KingOfGods-lava-pit,#KingOfGods-shell #KingOfGods-lava-pit::after{animation:none;background-position:0 0;}
+#KingOfGods-shell #KingOfGods-ember-container{display:none;}
+*{transition:none!important;}
+}
+/*-(7)(E)🤬(PARTICLES)🤬(E)(7)-*/
+</style>
+<style>
+/*-(8)(S)🤬(STYLES)🤬(S)(8)-*/
+#KingOfGods-shell .KingOfGods-armored-box{
+border:2px solid var(--primary);
+border-radius:6px;
+background:rgba(0,0,0,.6);
+box-shadow:0 0 10px var(--accent),inset 0 0 3px var(--accent);
+color:var(--primary);
+transition:all .3s ease;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+#KingOfGods-shell .KingOfGods-armored-btn{cursor:pointer;position:relative;overflow:hidden;}
+#KingOfGods-shell .KingOfGods-armored-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 18px var(--accent),inset 0 0 10px var(--accent);
+background:var(--primary);
+color:#000;
+}
+#KingOfGods-shell .KingOfGods-armored-btn:active{transform:scale(.95);}
+#KingOfGods-shell .KingOfGods-armored-btn:hover .KingOfGods-line{background:#000;box-shadow:none;}
+#KingOfGods-shell .KingOfGods-armored-btn:hover .KingOfGods-tv-shape{border-color:#000;box-shadow:none;}
+#KingOfGods-shell .KingOfGods-armored-btn:hover .KingOfGods-tv-shape::before{border-color:#000;}
+/*(8)(E)🤬(STYLES)🤬(E)(8)*/
+</style>
+<style>
+/*(9)(S)🤬(HEADER)🤬(S)(9)*/
+#KingOfGods-shell #KingOfGods-header{
+flex:0 0 var(--hf);
+width:100%;
+height:var(--hf);
+box-sizing:border-box;
+padding-top:env(safe-area-inset-top);
+position:relative;
+z-index:100;
+overflow:hidden;
+border-top:2px solid var(--primary);
+border-bottom:2px solid var(--primary);
+box-shadow:0 0 14px rgba(0,0,0,.65),0 0 16px var(--accent);
+backdrop-filter:blur(4px);
+-webkit-backdrop-filter:blur(4px);
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+padding-left:12px;
+padding-right:12px;
+}
+#KingOfGods-shell #KingOfGods-header::before{
+content:'';
+position:absolute;
+inset:0;
+background:
+repeating-linear-gradient(45deg,rgba(0,0,0,.58) 0,rgba(0,0,0,.58) 12px,rgba(0,0,0,.48) 12px,rgba(0,0,0,.48) 28px),
+radial-gradient(circle at 20% 20%, rgba(255,255,255,.05), transparent 55%),
+radial-gradient(circle at 80% 80%, rgba(0,0,0,.45), transparent 60%);
+pointer-events:none;
+}
+#KingOfGods-shell #KingOfGods-header::after{
+content:'';
+position:absolute;
+inset:-18%;
+background:
+radial-gradient(circle at 20% 80%, var(--accent) 0%, transparent 60%),
+radial-gradient(circle at 80% 20%, var(--primary) 0%, transparent 60%),
+linear-gradient(135deg,var(--primary) 0%, transparent 45%, var(--accent) 100%);
+mix-blend-mode:screen;
+opacity:.16;
+filter:blur(10px) saturate(1.2);
+pointer-events:none;
+}
+#KingOfGods-shell #KingOfGods-header>*{position:relative;z-index:2;}
+#KingOfGods-shell #KingOfGods-fs-toggle{
+width:44px;
+height:44px;
+flex:0 0 44px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+#KingOfGods-shell #KingOfGods-menu-toggle{
+width:44px;
+height:44px;
+flex:0 0 44px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:4px;
+}
+#KingOfGods-shell .KingOfGods-header-text{
+font-family:'Orbitron';
+font-weight:700;
+font-size:14px;
+letter-spacing:1px;
+color:var(--primary);
+text-shadow:0 0 14px var(--accent);
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+max-width:60vw;
+}
+#KingOfGods-shell .KingOfGods-tv-shape{
+width:16px;
+height:12px;
+border:2px solid var(--primary);
+border-radius:2px;
+position:relative;
+transition:border-color .3s,box-shadow .3s;
+box-shadow:0 0 10px var(--accent);
+}
+#KingOfGods-shell .KingOfGods-tv-shape::before{
+content:'';
+position:absolute;
+top:-5px;
+left:50%;
+margin-left:-4px;
+width:8px;
+height:3px;
+border-left:2px solid var(--primary);
+border-bottom:2px solid var(--primary);
+transform:rotate(45deg);
+transition:border-color .3s;
+}
+#KingOfGods-shell .KingOfGods-tv-shape.KingOfGods-exit::after{
+content:'';
+position:absolute;
+inset:-3px;
+background:linear-gradient(to top right,transparent 45%,var(--primary) 45%,var(--primary) 55%,transparent 55%);
+z-index:2;
+}
+#KingOfGods-shell .KingOfGods-armored-btn:hover .KingOfGods-tv-shape.KingOfGods-exit::after{
+background:linear-gradient(to top right,transparent 45%,#000 45%,#000 55%,transparent 55%);
+}
+#KingOfGods-shell .KingOfGods-line{
+width:20px;
+height:2px;
+background:var(--primary);
+box-shadow:0 0 10px var(--accent);
+transition:.3s;
+}
+@media (max-width:520px){
+#KingOfGods-shell #KingOfGods-header{flex:0 0 var(--hf-mobile);height:var(--hf-mobile);gap:6px;padding-left:8px;padding-right:8px;}
+#KingOfGods-shell #KingOfGods-fs-toggle{width:32px;height:32px;flex:0 0 32px;}
+#KingOfGods-shell #KingOfGods-menu-toggle{width:32px;height:32px;flex:0 0 32px;gap:3px;}
+#KingOfGods-shell .KingOfGods-tv-shape{width:14px;height:10px;}
+#KingOfGods-shell .KingOfGods-tv-shape::before{top:-4px;width:7px;height:3px;margin-left:-3.5px;}
+#KingOfGods-shell .KingOfGods-line{width:16px;height:2px;}
+#KingOfGods-shell .KingOfGods-header-text{font-size:12px;letter-spacing:.5px;max-width:58vw;}
+}
+/*(9)(E)🤬(HEADER)🤬(E)(9)*/
+</style>
+<style>
+/*(10)(S)🤬(TITLE)🤬(S)(10)*/
+#KingOfGods-shell .KingOfGods-title{
+margin:0;
+font-family:'Orbitron';
+font-style:italic;
+letter-spacing:3px;
+font-size:18px;
+padding:0 15px;
+height:44px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--primary);
+text-shadow:0 0 14px var(--accent);
+border:2px solid var(--primary);
+border-radius:6px;
+background:rgba(0,0,0,.22);
+box-shadow:0 0 14px var(--accent),inset 0 0 10px rgba(0,0,0,.55);
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+max-width:60vw;
+cursor:pointer;
+user-select:none;
+transition:all .3s ease;
+}
+#KingOfGods-shell .KingOfGods-title:hover{
+background:rgba(0,0,0,.14);
+box-shadow:0 0 18px var(--accent),inset 0 0 12px rgba(255,255,255,.06);
+}
+#KingOfGods-shell .KingOfGods-title:active{transform:scale(.98);}
+/*(10)(E)🤬(TITLE)🤬(E)(10)*/
+</style>
+<style>
+/*(11)(S)🤬(STAGE WRAP)🤬(S)(11)*/
+#KingOfGods-shell #KingOfGods-stagewrap{
+width:100%;
+flex:1 1 auto;
+display:flex;
+align-items:flex-start;
+justify-content:center;
+overflow:visible;
+}
+#KingOfGods-shell #KingOfGods-stage{
+width:100%;
+max-width:var(--stage);
+height:auto;
+aspect-ratio:980 / 1199;
+position:relative;
+overflow:hidden;
+display:block;
+}
+@media (max-width:520px){
+#KingOfGods-shell #KingOfGods-stage{
+aspect-ratio:320 / 539;
+}
+}
+#KingOfGods-shell #KingOfGods-stage::before{
+content:none;
+}
+/* 🔧 FIXED: Fullscreen stagewrap stability */
+body.KingOfGods-fullscreen #KingOfGods-shell #KingOfGods-stagewrap{
+flex:1 1 auto;
+min-height:0;
+}
+/*(11)(E)🤬(STAGE WRAP)🤬(E)(11)*/
+</style>
+<style>
+/*(12)(S)🤬(FOOTER)🤬(S)(12)*/
+#KingOfGods-shell #KingOfGods-footer{
+flex:0 0 var(--hf);
+flex-shrink:0;
+width:100%;
+height:var(--hf);
+box-sizing:border-box;
+padding-bottom:env(safe-area-inset-bottom);
+position:relative;
+overflow:hidden;
+z-index:100;
+display:flex;
+justify-content:center;
+align-items:center;
+padding-left:5px;
+padding-right:5px;
+gap:8px;
+border-top:1px solid var(--accent);
+border-bottom:2px solid var(--accent);
+backdrop-filter:blur(6px) saturate(1.05);
+-webkit-backdrop-filter:blur(6px) saturate(1.05);
+transition:border-color .4s ease,box-shadow .4s ease;
+background:rgba(0,0,0,.22);
+box-shadow:0 0 10px rgba(0,0,0,.55),0 0 14px var(--accent);
+}
+#KingOfGods-shell #KingOfGods-footer::before{
+content:'';
+position:absolute;
+inset:0;
+pointer-events:none;
+background:
+repeating-linear-gradient(45deg,rgba(0,0,0,.24) 0,rgba(0,0,0,.24) 12px,rgba(0,0,0,.18) 12px,rgba(0,0,0,.18) 28px),
+radial-gradient(circle at 22% 18%, rgba(255,255,255,.05), transparent 55%),
+radial-gradient(circle at 78% 85%, rgba(0,0,0,.35), transparent 60%),
+linear-gradient(135deg, rgba(0,0,0,.14) 0%, rgba(0,0,0,.22) 55%, rgba(0,0,0,.14) 100%);
+opacity:1;
+}
+#KingOfGods-shell #KingOfGods-footer::after{
+content:'';
+position:absolute;
+inset:-10%;
+pointer-events:none;
+background:
+radial-gradient(circle at 20% 80%, var(--accent) 0%, transparent 60%),
+radial-gradient(circle at 80% 20%, var(--primary) 0%, transparent 60%),
+linear-gradient(135deg, var(--primary) 0%, transparent 45%, var(--accent) 100%);
+mix-blend-mode:screen;
+opacity:.12;
+filter:blur(10px) saturate(1.15);
+}
+#KingOfGods-shell #KingOfGods-footer > *{position:relative;z-index:2;}
+#KingOfGods-shell .KingOfGods-hud-module{
+height:36px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:0 8px;
+font-family:'Orbitron';
+font-weight:bold;
+font-size:11px;
+line-height:1;
+white-space:nowrap;
+color:var(--primary);
+overflow:hidden;
+text-overflow:ellipsis;
+text-shadow:0 0 10px var(--accent);
+}
+#KingOfGods-shell #KingOfGods-footer-date{width:80px;flex:0 0 80px;}
+#KingOfGods-shell #KingOfGods-clock-display{cursor:pointer;width:80px;flex:0 0 80px;text-align:center;}
+#KingOfGods-shell #KingOfGods-footer-center{
+font-size:14px;
+line-height:1;
+letter-spacing:.5px;
+background:rgba(0,0,0,.18);
+cursor:pointer;
+transition:.3s;
+padding:0 6px;
+border-radius:4px;
+border:1px solid rgba(255,255,255,.10);
+box-shadow:0 0 10px var(--accent),inset 0 0 6px rgba(0,0,0,.55);
+max-width:calc(100vw - 190px);
+overflow:hidden;
+text-overflow:ellipsis;
+}
+#KingOfGods-shell #KingOfGods-footer-center span{
+margin:0;
+display:inline-block;
+max-width:100%;
+overflow:hidden;
+text-overflow:ellipsis;
+vertical-align:middle;
+}
+#KingOfGods-shell #KingOfGods-footer-center:hover{
+background:var(--accent);
+color:#000;
+text-shadow:none;
+box-shadow:0 0 14px var(--accent),inset 0 0 8px rgba(0,0,0,.55);
+}
+#KingOfGods-shell #KingOfGods-footer-center:active{transform:scale(.98);}
+@media (max-width:520px){
+#KingOfGods-shell #KingOfGods-footer{
+flex:0 0 var(--hf);
+height:var(--hf);}
+#KingOfGods-shell #KingOfGods-footer{gap:4px;padding-left:4px;padding-right:4px;}
+#KingOfGods-shell .KingOfGods-hud-module{height:32px;font-size:10px;padding:0 4px;}
+#KingOfGods-shell #KingOfGods-footer-date{width:70px;flex:0 0 70px;}
+#KingOfGods-shell #KingOfGods-clock-display{width:70px;flex:0 0 70px;}
+#KingOfGods-shell #KingOfGods-footer-center{font-size:11px;letter-spacing:0;padding:0 5px;max-width:calc(100vw - 160px);}
+}
+@media (max-width:350px){
+#KingOfGods-shell #KingOfGods-footer-center{max-width:calc(100vw - 150px);}
+}
+/*-(12)(E)🤬(FOOTER)🤬(E)(12)-*/
+</style>
+<style>
+/*-(13)(S)🤬(GLOBAL COMPONENT STYLES A)🤬(S)(13)-*/
+#KingOfGods-shell #KingOfGods-drawer-overlay{
+position:absolute;
+left:0;
+top:var(--hf);
+width:100%;
+z-index:180;
+opacity:0;
+pointer-events:none;
+transition:opacity .22s ease;
+background:rgba(0,0,0,.34);
+backdrop-filter:blur(6px) saturate(1.05);
+-webkit-backdrop-filter:blur(6px) saturate(1.05);
+}
+#KingOfGods-shell.KingOfGods-menu-open #KingOfGods-drawer-overlay{
+opacity:1;
+pointer-events:auto;
+}
+#KingOfGods-shell #KingOfGods-app-drawer{
+position:absolute;
+left:50%;
+top:var(--hf);
+width:var(--stage);
+transform:translateX(-50%) scale(.985);
+z-index:200;
+opacity:0;
+pointer-events:none;
+transition:opacity .22s ease,transform .22s ease;
+display:flex;
+flex-direction:column;
+overflow:hidden;
+border:2px solid var(--primary);
+border-radius:10px;
+background:rgba(0,0,0,.18);
+box-shadow:0 0 18px rgba(0,0,0,.65),0 0 18px var(--accent),inset 0 0 20px rgba(0,0,0,.65);
+}
+#KingOfGods-shell.KingOfGods-menu-open #KingOfGods-app-drawer{
+opacity:1;
+pointer-events:auto;
+transform:translateX(-50%) scale(1);
+}
+#KingOfGods-shell #KingOfGods-app-drawer::before{
+content:'';
+position:absolute;
+inset:0;
+pointer-events:none;
+background:
+repeating-linear-gradient(45deg,rgba(0,0,0,.28) 0,rgba(0,0,0,.28) 12px,rgba(0,0,0,.22) 12px,rgba(0,0,0,.22) 28px),
+radial-gradient(circle at 22% 18%, rgba(255,255,255,.06), transparent 55%),
+radial-gradient(circle at 78% 85%, rgba(0,0,0,.38), transparent 60%),
+linear-gradient(135deg, rgba(0,0,0,.20) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,.20) 100%);
+opacity:1;
+}
+#KingOfGods-shell #KingOfGods-app-drawer::after{
+content:'';
+position:absolute;
+inset:-10%;
+pointer-events:none;
+background:
+radial-gradient(circle at 20% 80%, var(--accent) 0%, transparent 60%),
+radial-gradient(circle at 80% 20%, var(--primary) 0%, transparent 60%),
+linear-gradient(135deg, var(--primary) 0%, transparent 45%, var(--accent) 100%);
+mix-blend-mode:screen;
+opacity:.12;
+filter:blur(10px) saturate(1.15);
+}
+#KingOfGods-shell #KingOfGods-drawer-content{
+position:relative;
+z-index:2;
+flex:1;
+overflow:auto;
+padding:10px;
+scrollbar-width:thin;
+scrollbar-color:var(--primary) transparent;
+scrollbar-gutter:stable;
+}
+#KingOfGods-shell #KingOfGods-drawer-content::-webkit-scrollbar{width:4px;}
+#KingOfGods-shell #KingOfGods-drawer-content::-webkit-scrollbar-track{background:transparent;}
+#KingOfGods-shell #KingOfGods-drawer-content::-webkit-scrollbar-thumb{background:var(--primary);border-radius:2px;}
+/*0(CLOSE ROW)=(top)-*/
+#KingOfGods-shell #KingOfGods-drawer-close{
+position:relative;
+z-index:3;
+margin:10px;
+padding:14px 14px;
+border-radius:8px;
+border:2px solid var(--primary);
+background:rgba(0,0,0,.16);
+box-shadow:0 0 14px var(--accent),inset 0 0 8px rgba(0,0,0,.55);
+color:var(--primary);
+text-shadow:0 0 10px var(--accent);
+font-family:'Orbitron';
+font-size:14px;
+letter-spacing:1px;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:space-between;
+transition:all .2s ease;
+user-select:none;
+}
+#KingOfGods-shell #KingOfGods-drawer-close:hover{
+background:rgba(0,0,0,.10);
+box-shadow:0 0 18px var(--accent),inset 0 0 10px rgba(255,255,255,.05);
+transform:translateY(-1px);
+}
+#KingOfGods-shell #KingOfGods-drawer-close:active{transform:translateY(1px) scale(.99);}
+#KingOfGods-shell .KingOfGods-drawer-item{
+position:relative;
+z-index:3;
+padding:14px 14px;
+margin:8px 10px;
+border-radius:8px;
+border:1px solid rgba(255,255,255,.10);
+background:rgba(0,0,0,.14);
+color:var(--primary);
+text-shadow:0 0 10px var(--accent);
+font-family:'Orbitron';
+font-size:14px;
+transition:all .18s ease;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+box-shadow:0 0 12px rgba(0,0,0,.35),inset 0 0 10px rgba(0,0,0,.55);
+user-select:none;
+}
+#KingOfGods-shell .KingOfGods-drawer-item:hover{
+background:rgba(0,0,0,.10);
+border-color:rgba(255,255,255,.14);
+box-shadow:0 0 16px var(--accent),inset 0 0 12px rgba(255,255,255,.05);
+}
+#KingOfGods-shell .KingOfGods-drawer-item:active{transform:scale(.995);}
+#KingOfGods-shell .KingOfGods-drawer-acc{
+margin:8px 10px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,.10);
+background:rgba(0,0,0,.12);
+overflow:hidden;
+box-shadow:inset 0 0 14px rgba(0,0,0,.6);
+}
+#KingOfGods-shell .KingOfGods-drawer-acc-btn{
+width:100%;
+border:0;
+background:transparent;
+color:var(--primary);
+text-shadow:0 0 10px var(--accent);
+font-family:'Orbitron';
+font-size:14px;
+padding:14px 14px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+cursor:pointer;
+transition:all .18s ease;
+user-select:none;
+}
+#KingOfGods-shell .KingOfGods-drawer-acc-btn:hover{
+background:rgba(0,0,0,.10);
+}
+#KingOfGods-shell .KingOfGods-drawer-acc-caret{
+width:10px;
+height:10px;
+border-right:2px solid var(--primary);
+border-bottom:2px solid var(--primary);
+box-shadow:0 0 10px var(--accent);
+transform:rotate(45deg);
+transition:transform .18s ease,border-color .18s ease;
+opacity:.9;
+}
+#KingOfGods-shell .KingOfGods-drawer-acc[aria-expanded="true"] .KingOfGods-drawer-acc-caret{transform:rotate(-135deg);}
+#KingOfGods-shell .KingOfGods-drawer-acc-panel{
+max-height:0;
+overflow:hidden;
+transition:max-height .22s ease;
+border-top:1px solid rgba(255,255,255,.06);
+}
+#KingOfGods-shell .KingOfGods-drawer-acc[aria-expanded="true"] .KingOfGods-drawer-acc-panel{
+max-height:calc(var(--stage) - 220px);
+overflow:auto;
+scrollbar-width:thin;
+scrollbar-color:var(--primary) transparent;
+scrollbar-gutter:stable;
+}
+#KingOfGods-shell .KingOfGods-drawer-acc-panel::-webkit-scrollbar{width:4px;}
+#KingOfGods-shell .KingOfGods-drawer-acc-panel::-webkit-scrollbar-track{background:transparent;}
+#KingOfGods-shell .KingOfGods-drawer-acc-panel::-webkit-scrollbar-thumb{background:var(--primary);border-radius:2px;}
+#KingOfGods-shell .KingOfGods-drawer-subitem{
+margin:8px 10px;
+padding:12px 12px;
+border-radius:8px;
+border:1px solid rgba(255,255,255,.10);
+background:rgba(0,0,0,.12);
+color:var(--primary);
+text-shadow:0 0 10px var(--accent);
+font-family:'Share Tech Mono';
+font-size:13px;
+cursor:pointer;
+transition:all .16s ease;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+box-shadow:inset 0 0 10px rgba(0,0,0,.55);
+user-select:none;
+}
+#KingOfGods-shell .KingOfGods-drawer-subitem:hover{
+background:rgba(0,0,0,.09);
+box-shadow:0 0 14px var(--accent),inset 0 0 12px rgba(255,255,255,.05);
+}
+#KingOfGods-shell .KingOfGods-drawer-subitem:active{transform:scale(.995);}
+@media (max-width:520px){
+#KingOfGods-shell #KingOfGods-app-drawer{border-radius:0;}
+#KingOfGods-shell #KingOfGods-drawer-close{margin:8px;padding:12px 12px;font-size:12px;}
+#KingOfGods-shell .KingOfGods-drawer-item{margin:6px 8px;padding:12px 12px;font-size:12px;}
+#KingOfGods-shell .KingOfGods-drawer-acc{margin:6px 8px;}
+#KingOfGods-shell .KingOfGods-drawer-acc-btn{padding:12px 12px;font-size:12px;}
+#KingOfGods-shell .KingOfGods-drawer-subitem{margin:6px 8px;padding:10px 10px;font-size:12px;}
+#KingOfGods-shell .KingOfGods-drawer-acc[aria-expanded="true"] .KingOfGods-drawer-acc-panel{max-height:calc(var(--stage) - 190px);}
+}
+/*(13)(E)🤬(GLOBAL COMPONENT STYLES A)🤬(E)(13)*/
+</style>
+<style>
+/*-(14)(S)🤬(GLOBAL COMPONENT STYLES B)🤬(S)(14)-*/
+#KingOfGods-shell h2{
+font-family:'Orbitron';
+letter-spacing:2px;
+font-size:24px;
+margin:0 0 20px 0;
+color:var(--primary);
+text-shadow:0 0 14px var(--accent);
+text-align:center;
+}
+#KingOfGods-shell p{
+font-size:13px;
+color:rgba(255,255,255,.72);
+max-width:420px;
+line-height:1.55;
+margin:0 0 20px 0;
+text-align:center;
+text-shadow:0 0 10px rgba(0,0,0,.6);
+}
+#KingOfGods-shell .KingOfGods-status-text{
+color:rgba(255,255,255,.38);
+font-size:12px;
+margin:0 0 30px 0;
+text-align:center;
+}
+#KingOfGods-shell .KingOfGods-btn-grid{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:10px;
+width:100%;
+}
+#KingOfGods-shell .KingOfGods-btn{
+background:rgba(0,0,0,.22);
+border:1px solid var(--accent);
+color:var(--primary);
+padding:10px 20px;
+font-family:'Share Tech Mono';
+font-size:14px;
+cursor:pointer;
+transition:.2s;
+text-transform:uppercase;
+letter-spacing:1px;
+border-radius:8px;
+text-shadow:0 0 10px var(--accent);
+box-shadow:
+0 0 10px rgba(0,0,0,.4),
+0 0 14px var(--accent),
+inset 0 0 10px rgba(0,0,0,.55);
+}
+#KingOfGods-shell .KingOfGods-btn:hover{
+background:rgba(0,0,0,.14);
+color:var(--primary);
+box-shadow:
+0 0 18px var(--accent),
+inset 0 0 12px rgba(255,255,255,.06);
+transform:translateY(-1px);
+}
+#KingOfGods-shell .KingOfGods-btn:active{transform:translateY(1px) scale(.995);}
+</style>
+<!--(12B)(E)🤬(GLOBAL COMPONENT STYLES)🤬(E)(12B)-->
+<!--(13)(S)🤬(BODY SHELL + BACKGROUND HOST)🤬(S)(13)-->
+<div id="KingOfGods-shell">
+<div id="KingOfGods-forge-rim"><div id="KingOfGods-lava-pit"></div><div id="KingOfGods-ember-container"></div></div>
+<!--(13)(E)🤬(BODY SHELL + BACKGROUND HOST)🤬(E)(13)-->
+<!--(14)(S)🤬(MENU MOUNT)🤬(S)(14)-->
+<div id="KingOfGods-drawer-overlay" onclick="window.App&&App.toggleDrawer(false)"></div>
+<nav id="KingOfGods-app-drawer" aria-hidden="true">
+<div id="KingOfGods-drawer-close" class="KingOfGods-drawer-item KingOfGods-sfx-click" tabindex="0" onclick="window.App&&App.toggleDrawer(false)">
+CLOSE MENU <span>×</span>
+</div>
+<div id="KingOfGods-drawer-content"></div>
+</nav>
+<!--(14)(E)🤬(MENU MOUNT)🤬(E)(14)-->
+<!--(15)(S)🤬(HEADER MARKUP)🤬(S)(15)-->
+<div id="KingOfGods-header">
+<button id="KingOfGods-fs-toggle" class="KingOfGods-armored-box KingOfGods-armored-btn KingOfGods-sfx-click" onclick="window.App&&App.toggleFullscreen()" aria-label="Fullscreen">
+<div class="KingOfGods-tv-shape" id="KingOfGods-fs-icon"></div>
+</button>
+<h1 id="KingOfGods-app-title" class="KingOfGods-title KingOfGods-theme-lock KingOfGods-sfx-switch" onclick="window.App&&App.toggleTheme()" title="Cycle Theme">APP</h1>
+<button id="KingOfGods-menu-toggle" class="KingOfGods-armored-box KingOfGods-armored-btn KingOfGods-sfx-click" onclick="window.App&&App.toggleDrawer(true)" aria-label="Open Menu" aria-expanded="false">
+<div class="KingOfGods-line"></div><div class="KingOfGods-line"></div><div class="KingOfGods-line"></div>
+</button>
+</div>
+<!--(15)(E)🤬(HEADER MARKUP)🤬(E)(15)-->
+<!--(16)(S)🤬(APP MOUNT)🤬(S)(16)-->
+<div id="KingOfGods-stagewrap"><div id="KingOfGods-stage"><div id="KingOfGods-app-mount"></div></div></div>
+<!--(16)(E)🤬(APP MOUNT)🤬(E)(16)-->
+<!--(17)(S)🤬(FOOTER MARKUP)🤬(S)(17)-->
+<div id="KingOfGods-footer">
+<div id="KingOfGods-footer-date" class="KingOfGods-armored-box KingOfGods-hud-module">--/--/--</div>
+<div id="KingOfGods-footer-center" class="KingOfGods-armored-box KingOfGods-hud-module KingOfGods-theme-lock KingOfGods-sfx-switch" onclick="window.App&&App.toggleInvert()">
+🛡️MILITARY-GRADE🛡️
+</div>
+<div id="KingOfGods-clock-display" class="KingOfGods-armored-box KingOfGods-hud-module KingOfGods-armored-btn KingOfGods-sfx-click" onclick="window.App&&App.toggleTime()">
+00:00
+</div>
+</div>
+<!--(17)(E)🤬(FOOTER MARKUP)🤬(E)(17)-->
+<!--(18)(S)🤬(SCRIPT BOOT)🤬(S)(18)-->
+<script>
+/*(18)(E)🤬(SCRIPT BOOT)🤬(E)(18)*/
+/*(S)👑🎸👑(KING OF GODS CARTRAGE)👑🎸👑(S)*/
+/*(1)(S)🎸(DATA VAULT)🎸(S)(1)*/
+// 1. DATA VAULT
+window.HubAlbums = [];
+window.Cartridge = window.Cartridge || {};
+const Cartridge = window.Cartridge = {
+meta: { title: "King of Gods", version: "IRON-CORE v8.1" },
+mountId: 'KingOfGods-app-mount',
+menu:[
+{label:"DASHBOARD",action:"dashboard"}
+],
+state: {
+currentAlbumIdx: 0,
+currentSongIdx: 0,
+isPlaying: false,
+view: 'cover',
+sortMode: 'date',
+repeatMode: 'ver', 
+playlist: [],
+audio: (window.KOG_AUDIO || new Audio()),
+displayAlbums: [],
+domLoaded: false
+},
+init: function(){ return this.onInit(); },
+onInit: function() {
+console.log("IRON-CORE v8.1: REFINED DOWNLOADS ONLINE");
+// --- INJECT LIBRARIES (Optimized) ---
+const libs = [
+"https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js",
+"https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js",
+"https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js",
+"https://cdn.jsdelivr.net/npm/browser-id3-writer@4.4.0/dist/browser-id3-writer.js"
+];
+
+// Load sequentially to ensure order
+this._libsReady=false;
+this._libsPromise=this._libsPromise||new Promise((resolve,reject)=>{
+let i=0;
+const loadOne=()=>{
+if(i>=libs.length){this._libsReady=true;resolve();return;}
+const src=libs[i++];
+if(document.querySelector(`script[src="${src}"]`)){loadOne();return;}
+const s=document.createElement("script");
+s.src=src;
+s.async=true;
+const timeout=setTimeout(()=>{
+try{ s.remove(); }catch(e){}
+reject(new Error("LIB TIMEOUT: "+src));
+},12000);
+s.onload=()=>{clearTimeout(timeout);loadOne();};
+s.onerror=()=>{clearTimeout(timeout);reject(new Error("LIB FAIL: "+src));};
+document.head.appendChild(s);
+};
+loadOne();
+});
+this._libsPromise.catch(e=>console.error(e));
+this.updateSort('date');
+this.loadAlbumData(0);
+// --- CSS INJECTION ---
+const style = document.createElement('style');
+style.innerHTML = `
+/* MOBILE SCROLL FIX */
+body, #KingOfGods-app-mount, #leader-container, #visual-stage {
+touch-action: pan-y !important; 
+-webkit-overflow-scrolling: touch;
+}
+/* LAYOUT */
+#leader-container{
+display:flex;
+flex-direction:column;
+align-items:stretch;
+width:100%;
+max-width:980px;
+margin:0 auto;
+}
+@media (max-width:980px){
+#leader-container{width:100%;max-width:980px;}
+}
+/* 🔧 FIXED: Fullscreen cartridge stability */
+body.KingOfGods-fullscreen #leader-container{
+width:var(--stage) !important;
+max-width:var(--stage) !important;
+height:calc(var(--stageh) - (var(--hf) * 2)) !important;
+margin:0 auto !important;
+contain:layout;
+}
+/* GLASS UI */
+.iron-row { display: flex; width: 100%; gap: 2px; margin-bottom: 0px; }
+.iron-box {
+background: rgba(0, 0, 0, 0.3);
+border: 1px solid var(--primary);
+box-shadow: inset 0 0 5px rgba(0,0,0,0.5); 
+display: flex; align-items: center; justify-content: center;
+color: var(--primary); font-family: 'Orbitron', sans-serif;
+position: relative; transition: all 0.2s ease;
+backdrop-filter: blur(2px);
+touch-action: manipulation; 
+}
+.iron-text { 
+overflow: hidden; white-space: nowrap; text-overflow: ellipsis; 
+padding: 0 5px; width: 100%; text-align: center; 
+font-weight: 700; letter-spacing: 2px; text-shadow: 0 0 5px var(--primary);
+}
+.iron-meta{
+font-size:11px;
+opacity:.85;
+letter-spacing:1px;
+margin-top:2px;
+text-shadow:0 0 5px var(--primary);
+}
+.iron-box:hover, .ctrl-btn:hover { background: var(--primary); color: #000 !important; box-shadow: 0 0 15px var(--primary); text-shadow: none; }
+/* VISUAL STAGE */
+#visual-stage{
+width:100%;
+aspect-ratio:1 / 1;
+position:relative;
+border:2px solid var(--primary);
+box-shadow:0 0 15px var(--primary);
+background:rgba(0,0,0,0.2);
+overflow:hidden;
+margin:0;
+contain:layout;
+}
+#cover-img{
+width:100%;
+height:100%;
+object-fit:contain;
+background:#000;
+display:block;
+opacity:0.9;
+}
+/* REPEAT BUTTON (single cycle) — same height as play buttons, full cover width */
+#rpt-row{
+width:100%;
+margin-bottom:2px;
+}
+#rpt-row #btn-rpt-cycle{
+width:100%;
+flex:1;
+height:calc(35px * var(--k-scale)) !important;
+font-size:calc(14px * var(--k-scale)) !important;letter-spacing:2px;
+font-family:'Orbitron',sans-serif;
+font-weight:700;
+cursor:pointer;
+user-select:none;
+
+border:1px solid var(--primary);
+color:var(--primary);
+background:rgba(0,0,0,0.3);
+box-shadow:inset 0 0 5px rgba(0,0,0,0.5);
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+touch-action:manipulation;
+}
+
+/* hover + active feel like the other controls */
+#rpt-row #btn-rpt-cycle:hover{
+background:var(--primary);
+color:#000;
+box-shadow:0 0 15px var(--primary);
+text-shadow:none;
+}
+#rpt-row #btn-rpt-cycle:active{
+transform:scale(.95);
+}
+#rpt-row #btn-rpt-cycle.active{
+background:var(--primary);
+color:#000;
+box-shadow:0 0 10px var(--primary);
+}
+
+/* scale it exactly like ctrl-btn (keeps same H on mobile/fullscreen scaling) */
+#leader-container > .iron-row#rpt-row{
+height:calc(35px * var(--k-scale)) !important;
+}
+#rpt-row #btn-rpt-cycle{
+height:calc(35px * var(--k-scale)) !important;
+font-size:calc(12px * var(--k-scale)) !important;
+}
+/* MENUS */
+#menu-overlay { 
+width: 100%; height: 100%; background: rgba(0,0,0,0.4); 
+display: flex; flex-direction: column; overflow-y: auto; padding: 5px;
+overscroll-behavior: contain; touch-action: pan-y; 
+}
+#menu-overlay::-webkit-scrollbar { width: 4px; background: transparent; }
+#menu-overlay::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 2px; box-shadow: 0 0 5px var(--primary); }
+
+.menu-item { 
+font-family: 'Share Tech Mono'; font-size: 15px; padding: 15px 5px; margin-bottom: 4px; 
+border-bottom: 1px solid var(--primary); 
+box-shadow: 0 1px 0 rgba(0,0,0,0.5);
+cursor: pointer; 
+text-align: center; color: var(--primary); letter-spacing: 1px;
+}
+.menu-item:hover { background: var(--primary); color: #000; font-weight:bold; box-shadow: 0 0 15px var(--primary); }
+.song-item { text-align: left; padding-left: 20px; }
+.sub-header { font-size: 14px; text-align: center; padding: 5px; color: #aaa; border-bottom: 1px solid var(--primary); margin-top: 15px; margin-bottom: 5px; font-family:'Orbitron'; }
+/* SORT BUTTONS */
+.sort-row { display: flex; width: 100%; gap: 2px; margin-bottom: 5px; height: 35px; flex-shrink: 0; }
+.sort-btn { flex: 1; border: 1px solid var(--primary); background: rgba(0,0,0,0.5); color: var(--primary); cursor: pointer; font-family: 'Share Tech Mono'; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+.sort-btn:hover, .sort-btn.active { background: var(--primary); color: #000; }
+/* PLASMA BAR */
+#time-row { height: 36px; }
+.time-digit { width: 70px; font-family: 'Share Tech Mono'; font-size: 16px; letter-spacing: 1px; }
+#lava-track { flex-grow: 1; background: transparent; align-self: center; position: relative; height: 12px; border-left: 1px solid var(--primary); border-right: 1px solid var(--primary); overflow:hidden;}
+#lava-fill { 
+position: absolute; left: 0; top: 0; bottom: 0; width: 0%; 
+background: repeating-linear-gradient(45deg, var(--primary), var(--primary) 10px, rgba(0,0,0,0) 10px, rgba(0,0,0,0) 20px);
+box-shadow: 0 0 10px var(--primary); opacity: 0.8; animation: plasma-flow 1s linear infinite; border-right: 2px solid #fff;
+}
+@keyframes plasma-flow { 0% { background-position: 0 0; } 100% { background-position: 28px 0; } }
+/* CONTROLS */
+.ctrl-btn { flex: 1; height: 35px; cursor: pointer; touch-action: manipulation; }
+.ctrl-btn:active { transform: scale(0.95); }
+.icon-play { width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 18px solid var(--primary); margin-left: 4px; }
+.ctrl-btn:hover .icon-play { border-left-color: #000; }
+.icon-pause { width: 14px; height: 18px; border-left: 5px solid var(--primary); border-right: 5px solid var(--primary); }
+.ctrl-btn:hover .icon-pause { border-color: #000; }
+.icon-next { width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 12px solid var(--primary); position: relative; }
+.icon-next::after { content:''; position: absolute; left: 6px; top: -8px; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 12px solid var(--primary); }
+.ctrl-btn:hover .icon-next, .ctrl-btn:hover .icon-next::after { border-left-color: #000; }
+.icon-prev { width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-right: 12px solid var(--primary); position: relative; }
+.icon-prev::after { content:''; position: absolute; right: 6px; top: -8px; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-right: 12px solid var(--primary); }
+.ctrl-btn:hover .icon-prev, .ctrl-btn:hover .icon-prev::after { border-right-color: #000; }
+/* POPUPS */
+.popup-box { position: absolute; bottom: 120%; left: 50%; transform: translateX(-50%); width: 300px; background: rgba(0,0,0,0.95); border: 2px solid var(--primary); box-shadow: 0 0 30px var(--primary); z-index: 100; padding: 15px; display: none; text-align: center; }
+.dl-btn { width: 100%; display: block; margin-bottom: 5px; padding: 12px; font-family: 'Share Tech Mono'; font-size: 14px; background: rgba(0,20,0,0.5); border: 1px solid var(--primary); color: var(--primary); cursor: pointer; text-transform: uppercase; touch-action: manipulation;}
+.dl-btn:hover { background: var(--primary); color: #000; box-shadow: 0 0 10px var(--primary); }
+
+/* PROCESSING STATUS BOX */
+#status-msg { font-family: 'Orbitron'; font-size: 14px; color: #fff; margin: 10px 0; line-height: 1.5; }
+
+
+/* BUTTON RESET (prevents clipping on some browsers) */
+button.iron-box{ padding:0; line-height:1; }
+
+/* 🔧 FIXED: Cartridge responsive scaling */
+#leader-container{
+--k-scale:var(--KingOfGods-scale,1);
+width:100% !important;
+height:100% !important;
+max-width:var(--stage) !important;
+margin:0 auto !important;
+}
+
+/* 🔧 FIXED: Mobile fullscreen scaling clamp */
+@media (max-width:520px){
+  body.KingOfGods-fullscreen #leader-container{
+    --k-scale:clamp(0.85, var(--KingOfGods-scale,1), 1.1);
+  }
+}
+
+/* Top-level dashboard rows only (prevents menu item clipping) */
+#leader-container > .iron-row:not(#lava-row){
+  height:calc(35px * var(--k-scale)) !important;
+}
+
+/* Lava row must stay thin (prevents "squishy / vanishing" bar) */
+#leader-container > #lava-row{
+  height:calc(12px * var(--k-scale)) !important;
+}
+
+#leader-container > .iron-row:first-child{
+height:calc(55px * var(--k-scale)) !important;
+}
+
+@media (max-width:520px){
+  #rpt-row{ margin-bottom:1px; }
+  #leader-container > #lava-row{ margin:0; }
+}
+
+/* 🔧 FIXED: No bottom gap below downloads */
+#leader-container > .iron-row:last-child{
+  margin-bottom:0!important;
+}
+
+/* Song display */
+#song-text-display{
+font-size:calc(18px * var(--k-scale)) !important;
+padding:0 calc(12px * var(--k-scale)) !important;
+}
+#song-text-display .meta{
+font-size:calc(10px * var(--k-scale)) !important;
+}
+
+/* Menu buttons */
+#btn-menu-alb,
+#btn-menu-song{
+font-size:calc(14px * var(--k-scale)) !important;
+}
+
+/* control button */
+.ctrl-btn{
+height:calc(35px * var(--k-scale)) !important;
+font-size:calc(14px * var(--k-scale)) !important;
+}
+
+/* Time display */
+.time-digit{
+width:calc(70px * var(--k-scale)) !important;
+font-size:calc(18px * var(--k-scale)) !important;
+}
+.time-sep{
+font-size:calc(18px * var(--k-scale)) !important;
+}
+
+/* Progress bar */
+#lava-track{
+height:calc(12px * var(--k-scale)) !important;
+}
+
+/* 🔧 FIXED: Hide time row (logic remains, layout removed) */
+#leader-container #time-row{
+  display:none!important;
+}
+
+/* Menu overlay typography */
+#menu-title{
+font-size:calc(18px * var(--k-scale)) !important;
+}
+.sub-header{
+font-size:calc(10px * var(--k-scale)) !important;
+}
+.menu-item{
+font-size:calc(14px * var(--k-scale)) !important;
+padding:calc(10px * var(--k-scale)) !important;
+}
+.sort-row{
+height:calc(35px * var(--k-scale)) !important;
+}
+
+/* Micro song display */
+#song-micro-display{
+font-size:calc(12px * var(--k-scale)) !important;
+padding:calc(6px * var(--k-scale)) calc(10px * var(--k-scale)) !important;
+}
+
+/* Icon sizing (keeps triangles readable on TV) */
+.icon-play{
+border-top-width:calc(10px * var(--k-scale)) !important;
+border-bottom-width:calc(10px * var(--k-scale)) !important;
+border-left-width:calc(16px * var(--k-scale)) !important;
+margin-left:calc(2px * var(--k-scale)) !important;
+}
+.icon-stop{
+width:calc(16px * var(--k-scale)) !important;
+height:calc(16px * var(--k-scale)) !important;
+}
+.icon-next{
+border-top-width:calc(10px * var(--k-scale)) !important;
+border-bottom-width:calc(10px * var(--k-scale)) !important;
+border-left-width:calc(16px * var(--k-scale)) !important;
+}
+.icon-next::after{
+left:calc(10px * var(--k-scale)) !important;
+top:calc(-10px * var(--k-scale)) !important;
+border-top-width:calc(10px * var(--k-scale)) !important;
+border-bottom-width:calc(10px * var(--k-scale)) !important;
+border-left-width:calc(16px * var(--k-scale)) !important;
+}
+.icon-prev{
+border-top-width:calc(10px * var(--k-scale)) !important;
+border-bottom-width:calc(10px * var(--k-scale)) !important;
+border-right-width:calc(16px * var(--k-scale)) !important;
+}
+.icon-prev::after{
+right:calc(10px * var(--k-scale)) !important;
+top:calc(-10px * var(--k-scale)) !important;
+border-top-width:calc(10px * var(--k-scale)) !important;
+border-bottom-width:calc(10px * var(--k-scale)) !important;
+border-right-width:calc(16px * var(--k-scale)) !important;
+}
+.icon-random{
+width:calc(20px * var(--k-scale)) !important;
+height:calc(20px * var(--k-scale)) !important;
+border-width:calc(2px * var(--k-scale)) !important;
+border-radius:calc(6px * var(--k-scale)) !important;
+}
+.icon-rpt{
+width:calc(18px * var(--k-scale)) !important;
+height:calc(18px * var(--k-scale)) !important;
+border-width:calc(2px * var(--k-scale)) !important;
+}
+#rpt-dot{
+width:calc(6px * var(--k-scale)) !important;
+height:calc(6px * var(--k-scale)) !important;
+}
+#btn-download{
+font-size:calc(14px * var(--k-scale)) !important;
+}
+
+/* Download popup (prevents text clipping on scale-up) */
+.download-popup{
+width:calc(300px * var(--k-scale)) !important;
+padding:calc(15px * var(--k-scale)) !important;
+font-size:calc(14px * var(--k-scale)) !important;
+max-width:calc(96vw - 20px) !important;
+}
+.download-title{
+font-size:calc(16px * var(--k-scale)) !important;
+}
+.download-item{
+padding:calc(8px * var(--k-scale)) calc(10px * var(--k-scale)) !important;
+font-size:calc(14px * var(--k-scale)) !important;
+}
+
+`;
+document.head.appendChild(style);
+this.state.audio.addEventListener('timeupdate', () => this.updateUI());
+this.state.audio.addEventListener('loadedmetadata', () => this.updateUI());
+this.state.audio.addEventListener('durationchange', () => this.updateUI());
+this.state.audio.addEventListener('ended', () => this.nextSong(true));
+this.state.audio.addEventListener('error', () => { console.log("Audio Err"); this.nextSong(true); });
+this.waitForDOM();
+},
+updateSort: function(mode) {
+this.state.sortMode = mode;
+const raw = [...window.HubAlbums];
+
+if(mode === "abc"){
+this.state.displayAlbums = raw.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
+}
+else if(mode === "date"){
+this.state.displayAlbums = raw.sort((a,b)=>{
+const d1=this.parseReleaseDate(a.releaseDate);
+const d2=this.parseReleaseDate(b.releaseDate);
+return d2-d1;
+});
+}
+this.refreshDisplay();
+},
+setRepeat: function(mode) {
+this.state.repeatMode = mode;
+this.refreshDisplay();
+},
+/* 🔧 FIXED: Cycle repeat modes (Album → All Albums → Song) */
+cycleRepeat: function(){
+  const m=this.state.repeatMode;
+  const next=
+    (m==="alb_ver")  ? "alb_vers" :
+    (m==="alb_vers") ? "song"     :
+                       "alb_ver";
+  this.setRepeat(next);
+},
+
+views: {
+dashboard: `
+<div id="leader-container">
+<div class="iron-row" style="height: 55px;">
+<div class="iron-box" style="flex:1;">
+<div id="song-text-display" class="iron-text" style="font-size: 14px;">PRESS PLAY</div>
+</div>
+</div>
+<div class="iron-row" style="height: 35px;">
+<button class="iron-box ctrl-btn KingOfGods-sfx-click" id="btn-menu-alb" style="font-size:14px; font-weight:bold;" onclick="Cartridge.setInternalView('albumMenu')">📜ALBUM📜</button>
+<button class="iron-box ctrl-btn KingOfGods-sfx-click" id="btn-menu-song" style="font-size:14px; font-weight:bold;" onclick="Cartridge.setInternalView('songMenu')">📜SONG📜</button>
+</div>
+<div id="visual-stage">
+<img id="cover-img" src="" alt="">
+<div id="menu-overlay" style="display:none;"></div>
+</div>
+<!-- 🔧 FIXED: Lava bar under cover (cover-width leader) -->
+<div class="iron-row" id="lava-row" style="height:calc(12px * var(--k-scale));">
+  <div id="lava-track" class="iron-box">
+    <div id="lava-fill"></div>
+  </div>
+</div>
+<!-- 🔧 FIXED: Single repeat cycle button (mobile-friendly) -->
+<div class="iron-row" id="rpt-row" style="height: 35px;">
+  <div class="rpt-btn" id="btn-rpt-cycle" onclick="Cartridge.cycleRepeat()">🔁 ALBUM 🔁</div>
+</div>
+<!-- 🔧 FIXED: Time UI removed (IDs kept for JS stability) -->
+<div id="time-row" class="iron-row">
+  <div id="time-cur" class="iron-box time-digit">00:00</div>
+  <div id="time-dur" class="iron-box time-digit">00:00</div>
+</div>
+<div class="iron-row" id="ctrl-row">
+<button class="iron-box ctrl-btn KingOfGods-sfx-click" onclick="Cartridge.prevAlbum()"><div class="icon-prev"></div><div style="width:2px; height:16px; background:var(--primary); margin-left:4px;"></div></button>
+<button class="iron-box ctrl-btn KingOfGods-sfx-click" onclick="Cartridge.prevSong()"><div class="icon-prev"></div></button>
+<button class="iron-box ctrl-btn KingOfGods-sfx-click" id="btn-play" onclick="Cartridge.togglePlay()">
+<div class="icon-play"></div>
+</button>
+<button class="iron-box ctrl-btn KingOfGods-sfx-click" onclick="Cartridge.nextSong()"><div class="icon-next"></div></button>
+<button class="iron-box ctrl-btn KingOfGods-sfx-click" onclick="Cartridge.nextAlbum()"><div style="width:2px; height:16px; background:var(--primary); margin-right:4px;"></div><div class="icon-next"></div></button>
+</div>
+<div class="iron-row" style="height: 35px; position: relative;">
+<button class="iron-box ctrl-btn KingOfGods-sfx-click" style="font-size:12px; font-weight:bold;" onclick="Cartridge.popupDownloadAlbum()">📥ALBUM📥</button>
+<button class="iron-box ctrl-btn KingOfGods-sfx-click" style="font-size:12px; font-weight:bold;" onclick="Cartridge.popupDownloadSong()">📥SONG📥</button>           
+<div id="dl-album-popup" class="popup-box">
+<div class="close-x" style="float:right; cursor:pointer; color:var(--primary);" onclick="this.parentElement.style.display='none'">X</div>
+<div style="border-bottom:1px solid var(--primary); margin-bottom:10px; color:#fff; font-family:'Orbitron';">SELECT VERSION</div>
+<div id="dl-btn-container"></div>
+</div>                
+<div id="dl-song-error" class="popup-box">
+<div class="close-x" style="float:right; cursor:pointer; color:var(--primary);" onclick="this.parentElement.style.display='none'">X</div>
+<div style="border-bottom:1px solid var(--primary); margin-bottom:10px; color:#fff; font-family:'Orbitron';">⚠️ ERROR ⚠️</div>
+<div style="color:var(--primary); font-size:12px;">SONG MUST BE PLAYING</div>
+</div>
+<div id="dl-status-popup" class="popup-box">
+<div style="border-bottom:1px solid var(--primary); margin-bottom:10px; color:#fff; font-family:'Orbitron';">SYSTEM STATUS</div>
+<div id="status-msg">INJECTING METADATA...</div>
+</div>
+</div>
+</div>
+`
+},
+waitForDOM: function() {
+const check = setInterval(() => {
+const rootId = this.mountId || 'KingOfGods-app-mount';
+if(document.getElementById(rootId)) {
+clearInterval(check);
+this.state.domLoaded = true;
+this.refreshDisplay();
+}
+}, 100);
+},
+// 5. CORE LOGIC
+loadAlbumData: function(idx) {
+if (idx >= this.state.displayAlbums.length) idx = 0;
+if (idx < 0) idx = this.state.displayAlbums.length - 1;
+this.state.currentAlbumIdx = idx;
+const album = this.state.displayAlbums[idx];      
+this.state.playlist = [];
+album.tracks.forEach((s,i)=>{
+this.state.playlist.push({...s,ver:"V1",trackNum:i+1});
+});
+this.state.currentSongIdx = 0;
+},
+loadAlbum: function(idx) {
+this.loadAlbumData(idx);
+this.state.view = 'cover';
+this.playSong(0);
+this.refreshDisplay();
+},
+playSong: function(idx) {
+if(idx < 0) idx = this.state.playlist.length - 1;
+if(idx >= this.state.playlist.length) idx = 0;
+this.state.currentSongIdx = idx;
+const track = this.state.playlist[idx];
+this.state.audio.src = track.url;
+this.state.audio.play().catch(e => console.log("Autoplay blocked"));
+this.state.isPlaying = true;
+this.refreshDisplay();
+},
+togglePlay: function() {
+if(!this.state.playlist.length) return;
+if(this.state.isPlaying) {
+this.state.audio.pause();
+this.state.isPlaying = false;
+} else {
+if(!this.state.audio.src) this.state.audio.src = this.state.playlist[this.state.currentSongIdx].url;
+this.state.audio.play();
+this.state.isPlaying = true;
+}
+this.refreshDisplay();
+},
+nextSong: function(auto = false) {
+const mode = this.state.repeatMode;
+const currIdx = this.state.currentSongIdx;
+const playlist = this.state.playlist;
+const currVer = playlist[currIdx].ver;
+if (mode === 'song' && auto) {
+this.state.audio.currentTime = 0;
+this.state.audio.play();
+return;
+}
+if (mode === 'ver') {
+let next = currIdx + 1;
+if (next < playlist.length && playlist[next].ver === currVer) this.playSong(next);
+else this.playSong(playlist.findIndex(s => s.ver === currVer));
+return;
+}
+if (mode === 'vers') {
+let next = currIdx + 1;
+if (next < playlist.length) this.playSong(next);
+else this.playSong(0);
+return;
+}
+if (mode === 'alb_ver') {
+let next = currIdx + 1;
+if (next < playlist.length && playlist[next].ver === currVer) {
+this.playSong(next);
+} else {
+let nextAlbIdx = this.state.currentAlbumIdx + 1;
+if(nextAlbIdx >= this.state.displayAlbums.length) nextAlbIdx = 0;
+this.loadAlbumData(nextAlbIdx);
+const matchIdx = this.state.playlist.findIndex(s => s.ver === currVer);
+this.playSong(matchIdx !== -1 ? matchIdx : 0);
+this.refreshDisplay();
+}
+return;
+}
+if (mode === 'alb_vers') {
+let next = currIdx + 1;
+if (next < playlist.length) {
+this.playSong(next);
+} else {
+let nextAlbIdx = this.state.currentAlbumIdx + 1;
+if(nextAlbIdx >= this.state.displayAlbums.length) nextAlbIdx = 0;
+this.loadAlbumData(nextAlbIdx);
+this.playSong(0);
+this.refreshDisplay();
+}
+return;
+}
+if(!auto) {
+let next = currIdx + 1;
+if(next >= playlist.length) next = 0;
+this.playSong(next);
+}
+},
+prevSong: function() { 
+let n = this.state.currentSongIdx - 1; 
+if(n < 0) n = this.state.playlist.length - 1; 
+this.playSong(n); 
+},
+nextAlbum: function() { let n = this.state.currentAlbumIdx + 1; this.loadAlbum(n); },
+prevAlbum: function() { let n = this.state.currentAlbumIdx - 1; this.loadAlbum(n); },
+
+setInternalView: function(v) {
+if(this.state.view === v) {
+this.state.view = 'cover'; 
+} else {
+this.state.view = v; 
+}
+this.refreshDisplay();
+},
+refreshDisplay: function() {
+if(!this.state.domLoaded) return;
+
+const album = this.state.displayAlbums[this.state.currentAlbumIdx];
+const track = this.state.playlist[this.state.currentSongIdx];
+const titleBox = document.getElementById('song-text-display');
+if(titleBox) {
+if(!this.state.isPlaying && this.state.audio.paused && this.state.audio.currentTime === 0) titleBox.innerText = "PLAY MUSIC";
+else{
+const d=this.formatReleaseDate(album.releaseDate);
+const meta=[album.title,album.release||"",album.year||"",d].filter(Boolean).join(" • ");
+titleBox.innerHTML=`<div>${track.trackNum}. ${track.title}</div><div class="iron-meta">${meta}</div>`;
+}
+}
+const pBtn = document.getElementById('btn-play');
+if(pBtn) pBtn.innerHTML = this.state.isPlaying ? `<div class="icon-pause"></div>` : `<div class="icon-play"></div>`;
+/* 🔧 FIXED: Cleanup - ensure no legacy rpt buttons remain active */
+['btn-rpt-ver','btn-rpt-vers','btn-rpt-alb-ver','btn-rpt-alb-vers','btn-rpt-song'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el) el.classList.remove('active');
+});
+/* 🔧 FIXED: Update single repeat cycle button label */
+const rpt = document.getElementById("btn-rpt-cycle");
+if(rpt){
+  const m = this.state.repeatMode;
+  if(m==="alb_ver"||m==="alb_vers"||m==="song") rpt.classList.add("active");
+else rpt.classList.remove("active");
+  if(m==="song") rpt.innerHTML="🔁 SONG 🔁";
+  else if(m==="alb_vers") rpt.innerHTML="🔁 ALL ALBUMS 🔁";
+  else rpt.innerHTML="🔁 ALBUM 🔁";
+}
+const btnAlb = document.getElementById('btn-menu-alb');
+const btnSong = document.getElementById('btn-menu-song');
+if(this.state.view === 'albumMenu') { btnAlb.classList.add('active'); btnSong.classList.remove('active'); }
+else if(this.state.view === 'songMenu') { btnSong.classList.add('active'); btnAlb.classList.remove('active'); }
+else { btnAlb.classList.remove('active'); btnSong.classList.remove('active'); }
+const img = document.getElementById('cover-img');
+const overlay = document.getElementById('menu-overlay');       
+if(this.state.view === 'cover') {
+img.style.display = 'block';
+img.src = album.coverUrl;
+overlay.style.display = 'none';
+} else {
+img.style.display = 'none';
+overlay.style.display = 'flex';
+overlay.innerHTML = this.buildMenuHTML();
+}
+},
+updateUI: function() {
+if(!this.state.domLoaded) return;
+const aud = this.state.audio;
+if(!aud.duration) return;
+const fmt = (t) => {
+const m = Math.floor(t / 60).toString().padStart(2, '0');
+const s = Math.floor(t % 60).toString().padStart(2, '0');
+return `${m}:${s}`;
+};
+document.getElementById('time-cur').innerText = fmt(aud.currentTime);
+document.getElementById('time-dur').innerText = fmt((aud.duration||0)-(aud.currentTime||0));
+document.getElementById('lava-fill').style.width = `${(aud.currentTime / aud.duration) * 100}%`;
+},
+buildMenuHTML:function(){
+let html="";
+if(this.state.view==="albumMenu"){
+html+=`
+<div class="sort-row">
+<button class="sort-btn ${this.state.sortMode==="date"?"active":""}" onclick="Cartridge.updateSort('date')">DATE</button>
+<button class="sort-btn ${this.state.sortMode==="abc"?"active":""}" onclick="Cartridge.updateSort('abc')">ABC</button>
+</div>
+`;
+this.state.displayAlbums.forEach((alb,i)=>{
+const active=i===this.state.currentAlbumIdx?"active":"";
+const d=this.formatReleaseDate(alb.releaseDate);
+const sub=[alb.release||"",alb.year||"",d].filter(Boolean).join(" • ");
+html+=`<div class="menu-item ${active}" onclick="Cartridge.loadAlbum(${i})">${alb.title}${sub?`<div style="font-size:11px;opacity:.7;margin-top:4px;">${sub}</div>`:""}</div>`;
+});
+}else{
+const album=this.state.displayAlbums[this.state.currentAlbumIdx];
+const list=(album&&album.tracks)?album.tracks:[];
+list.forEach((s,i)=>{
+const active=(this.state.currentSongIdx===i)?"active":"";
+html+=`<div class="menu-item song-item ${active}" onclick="Cartridge.playSong(${i})">${i+1}. ${s.title}</div>`;
+});
+}
+return html;
+},
+// --- DOWNLOAD ENGINE (SINGLE SONG ZIP FIX) ---
+parseReleaseDate:function(s){
+s=(s||"").trim();
+if(!s) return 0;
+if(/^\d{4}-\d{2}-\d{2}$/.test(s)) return Date.parse(s)||0;
+const m=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+if(m){
+const mm=("0"+m[1]).slice(-2),dd=("0"+m[2]).slice(-2),yy=m[3];
+return Date.parse(`${yy}-${mm}-${dd}`)||0;
+}
+return Date.parse(s)||0;
+},
+formatReleaseDate:function(s){
+const t=this.parseReleaseDate(s);
+if(!t) return "";
+const d=new Date(t);
+const mm=(d.getMonth()+1).toString().padStart(2,"0");
+const dd=d.getDate().toString().padStart(2,"0");
+const yy=d.getFullYear().toString().slice(-2);
+return `${mm}/${dd}/${yy}`;
+},
+pad: function(n) { return n < 10 ? '0' + n : n; },
+getExtFromUrl:function(u){
+u=(u||"").split("?")[0];
+const m=u.match(/\.([a-z0-9]+)$/i);
+return m?m[1].toLowerCase():"mp3";
+},
+getOutExt:function(u){
+const ext=this.getExtFromUrl(u);
+if(ext==="wav") return "mp3";
+return ext;
+},
+showStatus: function(msg, isError = false) {
+const box = document.getElementById('dl-status-popup');
+const txt = document.getElementById('status-msg');
+document.querySelectorAll('.popup-box').forEach(el => el.style.display = 'none');
+box.style.display = 'block';
+txt.innerText = msg;
+txt.style.color = isError ? '#ff3333' : '#fff';
+},   
+hideStatus: function() { document.getElementById('dl-status-popup').style.display = 'none'; },
+popupDownloadAlbum:function(){
+document.querySelectorAll(".popup-box").forEach(el=>el.style.display="none");
+const box=document.getElementById("dl-album-popup");
+const container=document.getElementById("dl-btn-container");
+const album=this.state.displayAlbums[this.state.currentAlbumIdx] || {};
+let buttons="";
+
+// If you ever add album.versions later, this will show per-version buttons too.
+if(album.versions && typeof album.versions === "object"){
+buttons+=`<button class="dl-btn" onclick="Cartridge.processZip('ALL')">DOWNLOAD ALL</button>`;
+for(const verName of Object.keys(album.versions)){
+const safe = String(verName).replace(/"/g,'&quot;').replace(/'/g,"&#39;");
+buttons+=`<button class="dl-btn" onclick="Cartridge.processZip('${safe}')">DOWNLOAD ${safe}</button>`;
+}
+} else {
+buttons+=`<button class="dl-btn" onclick="Cartridge.processZip('TRACKS')">DOWNLOAD ALBUM</button>`;
+}
+
+container.innerHTML=buttons;
+box.style.display="block";
+},
+popupDownloadSong:function(){
+document.querySelectorAll(".popup-box").forEach(el=>el.style.display="none");
+const track=this.state.playlist[this.state.currentSongIdx];
+if(!track || !track.url){
+document.getElementById("dl-song-error").style.display="block";
+return;
+}
+// allow download even if paused; we only need a selected track
+this.processSingleZip();
+},
+
+/**
+ * Creates a Blob for a track with metadata + cover baked in.
+ * - MP3: tags are written directly
+ * - WAV: converted to MP3 first, then tagged
+ */
+createTaggedBlob: async function(track, album){
+try{
+if(!track || !track.url) throw new Error("MISSING TRACK URL");
+const srcUrl = track.url;
+const srcExt = this.getExtFromUrl(srcUrl);
+
+// --- fetch audio bytes ---
+const audioBuf = await fetch(srcUrl).then(r=>{
+if(!r.ok) throw new Error("AUDIO FETCH FAIL");
+return r.arrayBuffer();
+});
+
+// --- determine output container ---
+let outArrayBuffer = audioBuf;
+let outMime = (srcExt==="mp3") ? "audio/mpeg" : (srcExt==="wav" ? "audio/mpeg" : "application/octet-stream");
+
+// --- WAV -> MP3 conversion (required to embed cover reliably) ---
+if(srcExt === "wav"){
+if(typeof lamejs === "undefined") throw new Error("LAMEJS NOT LOADED");
+const AudioCtx = window.AudioContext || window.webkitAudioContext;
+if(!AudioCtx) throw new Error("AUDIOCONTEXT UNAVAILABLE");
+
+const ctx = new AudioCtx();
+let abuf;
+try{
+abuf = await new Promise((resolve,reject)=>{
+// Some browsers return a Promise, some use callbacks
+const p = ctx.decodeAudioData(audioBuf.slice(0));
+if(p && typeof p.then === "function") p.then(resolve).catch(reject);
+else ctx.decodeAudioData(audioBuf.slice(0), resolve, reject);
+});
+} finally {
+try{ await ctx.close(); }catch(e){}
+}
+
+const numCh = abuf.numberOfChannels || 1;
+const sampleRate = abuf.sampleRate || 44100;
+
+// float32 -> int16
+const floatTo16 = (f32)=>{
+const out = new Int16Array(f32.length);
+for(let i=0;i<f32.length;i++){
+let s = Math.max(-1, Math.min(1, f32[i]));
+out[i] = (s < 0) ? (s * 0x8000) : (s * 0x7FFF);
+}
+return out;
+};
+
+const left = floatTo16(abuf.getChannelData(0));
+const right = (numCh>1) ? floatTo16(abuf.getChannelData(1)) : null;
+
+const kbps = 320; // quality target
+const enc = new lamejs.Mp3Encoder(numCh, sampleRate, kbps);
+const block = 1152;
+const mp3Chunks = [];
+
+for(let i=0;i<left.length;i+=block){
+const l = left.subarray(i, i+block);
+let mp3buf;
+if(numCh === 2 && right){
+const r = right.subarray(i, i+block);
+mp3buf = enc.encodeBuffer(l, r);
+} else {
+mp3buf = enc.encodeBuffer(l);
+}
+if(mp3buf && mp3buf.length) mp3Chunks.push(mp3buf);
+}
+const endBuf = enc.flush();
+if(endBuf && endBuf.length) mp3Chunks.push(endBuf);
+
+// concat Uint8Arrays
+let total = 0;
+mp3Chunks.forEach(b=> total += b.length);
+const mp3U8 = new Uint8Array(total);
+let off = 0;
+mp3Chunks.forEach(b=>{ mp3U8.set(b, off); off += b.length; });
+
+outArrayBuffer = mp3U8.buffer.slice(mp3U8.byteOffset, mp3U8.byteOffset + mp3U8.byteLength);
+outMime = "audio/mpeg";
+}
+
+// --- cover cache ---
+let coverBuf = null;
+const coverUrl = (album && album.coverUrl) ? album.coverUrl : "";
+if(coverUrl){
+try{
+this._coverCache = this._coverCache || {};
+if(this._coverCache[coverUrl]) coverBuf = this._coverCache[coverUrl];
+else {
+coverBuf = await fetch(coverUrl).then(r=>{
+if(!r.ok) throw new Error("COVER FETCH FAIL");
+return r.arrayBuffer();
+});
+this._coverCache[coverUrl] = coverBuf;
+}
+}catch(e){
+console.warn("Cover fetch failed:", e);
+coverBuf = null;
+}
+}
+
+// --- Tagging (MP3/converted MP3) ---
+if(typeof ID3Writer === "undefined") throw new Error("ID3 WRITER NOT LOADED");
+const writer = new ID3Writer(outArrayBuffer);
+
+const title = track.title || "Track";
+const artist = (album && album.artist) ? album.artist : (track.artist || "Unknown Artist");
+const albumTitle = (album && album.title) ? album.title : "Unknown Album";
+const year = (album && album.year) ? String(album.year) : "";
+const releaseDate = (album && album.releaseDate) ? String(album.releaseDate) : "";
+
+writer.setFrame("TIT2", title);
+writer.setFrame("TPE1", [artist]);
+writer.setFrame("TALB", albumTitle);
+writer.setFrame("TRCK", String(track.trackNum || 1));
+
+if(year) writer.setFrame("TYER", year);
+// ID3v2.4 date frame (some players prefer this)
+try{ if(releaseDate) writer.setFrame("TDRC", releaseDate); }catch(e){}
+
+writer.setFrame("TPUB", "King of Gods");
+writer.setFrame("WOAR", "https://www.kingofgods.studio");
+writer.setFrame("COMM", { description: "KOG", text: "https://www.kingofgods.studio" });
+
+if(coverBuf){
+try{
+writer.setFrame("APIC", {
+type: 3,
+data: new Uint8Array(coverBuf),
+description: "Cover"
+});
+}catch(e){ console.warn("APIC failed:", e); }
+}
+
+writer.addTag();
+return writer.getBlob();
+
+}catch(e){
+console.error("createTaggedBlob failed", e);
+// fallback: original bytes (still downloadable)
+try{
+if(track && track.url){
+const raw = await fetch(track.url).then(r=>r.arrayBuffer());
+const ext2 = this.getExtFromUrl(track.url);
+const mime2 = (ext2==="wav") ? "audio/wav" : (ext2==="mp3" ? "audio/mpeg" : "application/octet-stream");
+return new Blob([raw], {type: mime2});
+}
+}catch(e2){}
+return new Blob([], {type:"application/octet-stream"});
+}
+},
+
+processSingleZip: async function() {
+if(typeof JSZip === "undefined"){ this.showStatus("ZIP ENGINE LOADING...", true); setTimeout(()=>this.hideStatus(), 1500); return; }
+try{
+if(!this._libsReady){
+this.showStatus("LOADING TAG ENGINE...", true);
+await this._libsPromise;
+}
+const track = this.state.playlist[this.state.currentSongIdx];
+const album = this.state.displayAlbums[this.state.currentAlbumIdx];
+if(!track || !track.url) throw new Error("NO TRACK SELECTED");
+
+this.showStatus("PACKAGING SONG...");
+const zip = new JSZip();
+const folderName = (album && album.title) ? album.title : "Album";
+const folder = zip.folder(folderName);
+const now = new Date();
+
+const trackInfo = {...track, trackNum: (track.trackNum || (this.state.currentSongIdx+1))};
+const blob = await this.createTaggedBlob(trackInfo, album);
+
+const safeTitle = String(track.title || "Track").replace(/[\\/:*?"<>|]/g, "-");
+const fileName = `${this.pad(trackInfo.trackNum)}. ${safeTitle}.${this.getOutExt(track.url)}`;
+folder.file(fileName, blob, {date: now});
+
+const out = await zip.generateAsync({type:"blob"});
+if(typeof saveAs !== "undefined") saveAs(out, `${safeTitle}.zip`);
+else {
+const a=document.createElement("a"); const url=URL.createObjectURL(out);
+a.href=url; a.download=`${safeTitle}.zip`; document.body.appendChild(a); a.click(); a.remove();
+setTimeout(()=>URL.revokeObjectURL(url),2000);
+}
+this.hideStatus();
+}catch(e){
+console.error(e);
+this.showStatus("ERROR: " + (e && e.message ? e.message : "SONG ZIP FAILED"), true);
+setTimeout(()=>this.hideStatus(),3500);
+}
+},
+
+processZip: async function(target){
+if(typeof JSZip === "undefined") { this.showStatus("ZIP ENGINE LOADING...", true); setTimeout(()=>this.hideStatus(), 1500); return; }
+try{
+if(!this._libsReady){
+this.showStatus("LOADING TAG ENGINE...", true);
+await this._libsPromise;
+}
+const album = this.state.displayAlbums[this.state.currentAlbumIdx] || {};
+const zip = new JSZip();
+const mainFolder = zip.folder(album.title || "Album");
+const now = new Date();
+
+this.showStatus("COMPRESSING ALBUM...");
+
+const addTrackToZip = async (folder, song, idx, total) => {
+if(!song || !song.url) return;
+this.showStatus(`ENCODING ${idx+1}/${total}: ${(song.title||"Track")}`);
+const trackInfo = {...song, trackNum: idx+1};
+const blob = await this.createTaggedBlob(trackInfo, album);
+const safeTitle = String(song.title || `Track ${idx+1}`).replace(/[\\/:*?"<>|]/g, "-");
+folder.file(`${this.pad(idx+1)}. ${safeTitle}.${this.getOutExt(song.url)}`, blob, {date: now});
+};
+
+// Sequential (prevents browser lock-ups on WAV->MP3)
+if(target === "ALL" && album.versions){
+for(const [verName, songs] of Object.entries(album.versions)){
+const list = songs || [];
+const subFolder = mainFolder.folder(`${album.title} - ${verName}`);
+for(let i=0;i<list.length;i++){
+await addTrackToZip(subFolder, list[i], i, list.length);
+}
+}
+} else if(album.versions && album.versions[target]){
+const list = album.versions[target] || [];
+const subFolder = mainFolder.folder(`${album.title} - ${target}`);
+for(let i=0;i<list.length;i++){
+await addTrackToZip(subFolder, list[i], i, list.length);
+}
+} else {
+const list = album.tracks || [];
+for(let i=0;i<list.length;i++){
+await addTrackToZip(mainFolder, list[i], i, list.length);
+}
+}
+
+this.showStatus("FINALIZING ZIP...");
+const out=await zip.generateAsync({type:"blob"});
+const zipName = `${album.title || "Album"}.zip`;
+if(typeof saveAs !== "undefined") saveAs(out, zipName);
+else {
+const a=document.createElement("a"); const url=URL.createObjectURL(out);
+a.href=url; a.download=zipName; document.body.appendChild(a); a.click(); a.remove();
+setTimeout(()=>URL.revokeObjectURL(url),2000);
+}
+this.hideStatus();
+}catch(e){
+console.error(e);
+this.showStatus("ERROR: " + (e && e.message ? e.message : "ZIP FAILED"), true);
+setTimeout(()=>this.hideStatus(),3500);
+}
+}
+};
+/*-----Album List-----*/
+/* ----------(Almost Tripped Into Hell)---------- */
+window.HubAlbums.push({
+title:"Almost Tripped Into Hell",
+artist:"King of Gods",
+year:"2024",
+release:"Original",
+releaseDate:"2024-12-12",
+coverUrl:"https://static.wixstatic.com/media/8cf24d_c06c3bee3133417a8c0d757a4bc2f736~mv2.jpg",
+tracks:[
+{title:"Walkin' the Line",url:"https://static.wixstatic.com/mp3/8cf24d_277b2c7084d649e6a08922a369660e4f.wav"},
+{title:"Balancing On The Edge",url:"https://static.wixstatic.com/mp3/8cf24d_c4d143d0e8da41c2bb1e78f2d931272a.wav"},
+{title:"Avoiding the Flames",url:"https://static.wixstatic.com/mp3/8cf24d_652aabb40dc844afbd74ef4ff6915bab.wav"},
+{title:"Dodgin' Demons in the Alleyways",url:"https://static.wixstatic.com/mp3/8cf24d_22941844e71a45d58656edc46231f5e2.wav"},
+{title:"Not Falling Down",url:"https://static.wixstatic.com/mp3/8cf24d_1554171ade78413ab2bc66d7c69aa42f.wav"},
+{title:"Hellish Waltz",url:"https://static.wixstatic.com/mp3/8cf24d_372ea3d182c54325931340bd7f3704cb.wav"},
+{title:"Hellhounds Baying",url:"https://static.wixstatic.com/mp3/8cf24d_7f0c60dd5e164aa48fff4565e1904e63.wav"},
+{title:"Avoid the Abyss",url:"https://static.wixstatic.com/mp3/8cf24d_b298416840be4622b9af3d5558964961.wav"},
+{title:"No Burn in My Step",url:"https://static.wixstatic.com/mp3/8cf24d_a4f8cab6a6694079a285ef3e87e059e3.wav"},
+{title:"Escaping Inferno",url:"https://static.wixstatic.com/mp3/8cf24d_c703a3bbf27643f5aa01124bec3777b3.wav"}
+]
+});
+/* ---------- END ALBUM ---------- */
+/* ----------(Bad to the Bone)---------- */
+window.HubAlbums.push({
+title:"Bad to the Bone",
+artist:"King of Gods",
+year:"2024",
+release:"Original",
+releaseDate:"2024-12-08",
+coverUrl:"https://static.wixstatic.com/media/8cf24d_332d463eebd4472caf319031b68ed26d~mv2.jpg",
+tracks:[
+{title:"Thirteen Rounds Spinnin'",url:"https://static.wixstatic.com/mp3/8cf24d_1873b7e37d50479d9f3d849165848450.wav"},
+{title:"Grim Reaper Slippin’",url:"https://static.wixstatic.com/mp3/8cf24d_c1fa47e69ff24b8691702fbc53d07377.wav"},
+{title:"Darkness Falls",url:"https://static.wixstatic.com/mp3/8cf24d_a80cb084e27947719702101a5ed90f94.wav"},
+{title:"Gunfire Echoed",url:"https://static.wixstatic.com/mp3/8cf24d_e3e9852558a241bab47820dde0f8998c.wav"},
+{title:"Crossfire Hot",url:"https://static.wixstatic.com/mp3/8cf24d_4e9bb3021e4340bba0f5b3ecfb179ca5.wav"},
+{title:"Cobblestone Streets",url:"https://static.wixstatic.com/mp3/8cf24d_371309526c154c7990534a6d64232d10.wav"},
+{title:"Dark Skies Fall",url:"https://static.wixstatic.com/mp3/8cf24d_0f195ba55dc54ddab58e4f34d1df61de.wav"},
+{title:"Defying Death",url:"https://static.wixstatic.com/mp3/8cf24d_43aa928ed1a3432398125a5e818c5de8.wav"},
+{title:"Bullets Flying",url:"https://static.wixstatic.com/mp3/8cf24d_6facea2fc97146c5ab28c315d07dbd54.wav"},
+{title:"Heart Pumpin'",url:"https://static.wixstatic.com/mp3/8cf24d_6c9416a91cd44a2fa436a994940babe9.wav"},
+{title:"Grim Reaper's Gone",url:"https://static.wixstatic.com/mp3/8cf24d_b8c8b0ccab524073a23c9aa648d9fcfa.wav"},
+{title:"Thirteen Shots",url:"https://static.wixstatic.com/mp3/8cf24d_23a9b08510f7408eaa54c7fca7683946.wav"},
+{title:"Friday the 13th",url:"https://static.wixstatic.com/mp3/8cf24d_a658fad02f49423a9fe3630cd2923e46.wav"}
+]
+});
+/* ---------- END ALBUM ---------- */
+/* ----------(Banana Man: Volume One)---------- */
+window.HubAlbums.push({
+title:"Banana Man: Volume One",
+artist:"King of Gods",
+year:"2025",
+release:"Original",
+releaseDate:"2025-09-06",
+coverUrl:"https://static.wixstatic.com/media/8cf24d_128d5ec4e7574fc3aa470d696f035640~mv2.jpg",
+tracks:[
+{title:"Farmer Joe’s field",url:"https://static.wixstatic.com/mp3/8cf24d_04edc51c7eb24c208828140f38943fc5.mp3"},
+{title:"Rustbucket Ridge",url:"https://static.wixstatic.com/mp3/8cf24d_5dbecb01813f4fe0831e4872d6b0a5f5.mp3"},
+{title:"Rusty Creek",url:"https://static.wixstatic.com/mp3/8cf24d_d40b46508c2c41afb9baa1beb90c2ea7.mp3"},
+{title:"Jellybean Crater",url:"https://static.wixstatic.com/mp3/8cf24d_aa20ed220a7b4c22919e9770e6216b5e.mp3"},
+{title:"Cactus Hollow",url:"https://static.wixstatic.com/mp3/8cf24d_c3fe284191d84ee585107a878147a001.mp3"},
+{title:"Gravel Gulch",url:"https://static.wixstatic.com/mp3/8cf24d_1d1e23102a20446eb49e7ce7d5e43637.mp3"},
+{title:"Swampy Gulch",url:"https://static.wixstatic.com/mp3/8cf24d_55a61626defb4fcc89e564af1182f359.mp3"},
+{title:"Rusty Ridge",url:"https://static.wixstatic.com/mp3/8cf24d_1b639c80f6fa4be8af136848fc46d991.mp3"},
+{title:"Dustbowl Hollow",url:"https://static.wixstatic.com/mp3/8cf24d_1140fc8553d14b7fbd7d31f341da3aec.mp3"},
+{title:"Sweetwater Hollow",url:"https://static.wixstatic.com/mp3/8cf24d_47dd2e6ad9594855b42b89282261e659.mp3"},
+{title:"Rattlesnake Flats",url:"https://static.wixstatic.com/mp3/8cf24d_c26177c3a305469b8eeacaf008cf916a.mp3"},
+{title:"Gator Gulch",url:"https://static.wixstatic.com/mp3/8cf24d_6221e37830c8491999090df0f31daf31.mp3"},
+{title:"Sassafras Grove",url:"https://static.wixstatic.com/mp3/8cf24d_10cc45f41ab44c7ebd83fd5651f04d6a.mp3"},
+{title:"Split-Pea Holler",url:"https://static.wixstatic.com/mp3/8cf24d_272491a5edb846f19d3d43cc157428f2.mp3"},
+{title:"Rattlesnake Ridge",url:"https://static.wixstatic.com/mp3/8cf24d_cdcb319032c94aba99aaa7446a41cd52.mp3"},
+{title:"Rotten Peach Hollow",url:"https://static.wixstatic.com/mp3/8cf24d_1303813efb664aadb67421f8243c1745.mp3"},
+{title:"Peelin' County",url:"https://static.wixstatic.com/mp3/8cf24d_792eef6d5ba14e6a8237b3ef0fb6d421.mp3"},
+{title:"Splatter Creek",url:"https://static.wixstatic.com/mp3/8cf24d_e997fe4d01fe413c9e6a4a22438449eb.mp3"},
+{title:"Rusty Fork",url:"https://static.wixstatic.com/mp3/8cf24d_5fd12dfe425e46d79399da0d376ac2ff.mp3"},
+{title:"Spittoon Valley",url:"https://static.wixstatic.com/mp3/8cf24d_eb0e0713a1534ac7bb79a04449781dd0.mp3"},
+{title:"Peel Valley",url:"https://static.wixstatic.com/mp3/8cf24d_e22eac9c3ad34a73b09eb34aff2f67ad.mp3"},
+{title:"Gristle Creek",url:"https://static.wixstatic.com/mp3/8cf24d_9d764e58059149cc95c3a1d3e44377c3.mp3"},
+{title:"Split Creek",url:"https://static.wixstatic.com/mp3/8cf24d_3bab86846dea4ed189357f87eefea2d4.mp3"},
+{title:"Sweetwater",url:"https://static.wixstatic.com/mp3/8cf24d_901ed872ede34e52b7c44fb326a86595.mp3"},
+{title:"Copper Junction",url:"https://static.wixstatic.com/mp3/8cf24d_791fd58f554d49ba90a85afb9ea6e278.mp3"},
+{title:"Splitjaw",url:"https://static.wixstatic.com/mp3/8cf24d_fe131cff37364fe799c3fe0265f3af87.mp3"},
+{title:"Rusty Fork Ridge",url:"https://static.wixstatic.com/mp3/8cf24d_b9fe48ada78441dc8e4ba3a93e6d642c.mp3"},
+{title:"Lonesome Rill",url:"https://static.wixstatic.com/mp3/8cf24d_dc73f5abe5934e2d9f1e5b41e56e32d9.mp3"},
+{title:"Kalamazoo",url:"https://static.wixstatic.com/mp3/8cf24d_140414d81d374a2fa1d7f25c2b475712.mp3"},
+{title:"Rustbucket County",url:"https://static.wixstatic.com/mp3/8cf24d_c1b18798121e42e5abc5b6939d6a76fe.mp3"}
+]
+});
+/* ---------- END ALBUM ---------- */
+/* ----------(Banana Man: Volume Two (No Mercy) (Bonus Tracks))---------- */
+window.HubAlbums.push({
+title:"Banana Man: Volume Two (No Mercy) (Bonus Tracks)",
+artist:"King of Gods",
+year:"2025",
+release:"Original",
+releaseDate:"2025-09-25",
+coverUrl:"https://static.wixstatic.com/media/8cf24d_8981d98e769640778c0c04947e15417b~mv2.png",
+tracks:[
+{title:"Pitchfork Parade Massacre",url:"https://static.wixstatic.com/mp3/8cf24d_b6094f8b26f84388b273bbef99e00059.mp3"},
+{title:"Sulfur Street Showdown",url:"https://static.wixstatic.com/mp3/8cf24d_fa4f706fe02b42588517445cc88a491c.mp3"},
+{title:"Bone Yard Blitz",url:"https://static.wixstatic.com/mp3/8cf24d_fac78bce8c20425b9dbbe3572456c5d0.mp3"},
+{title:"Guillotine Rumble",url:"https://static.wixstatic.com/mp3/8cf24d_05d04354bfc14fffbe20007dd139373b.mp3"},
+{title:"Inferno Highway Slam",url:"https://static.wixstatic.com/mp3/8cf24d_ed01f63b305e49899622d0eed3c22a51.mp3"},
+{title:"Carnival of Skulls",url:"https://static.wixstatic.com/mp3/8cf24d_7c1eb237199d457cb14769c73c9665f3.mp3"},
+{title:"Arena of Ash",url:"https://static.wixstatic.com/mp3/8cf24d_a596c698fc454c2aba18a804705b2107.mp3"},
+{title:"Volcano Vengeance",url:"https://static.wixstatic.com/mp3/8cf24d_9ca27787258c4b57a6c10df5cd3dd222.mp3"},
+{title:"Graveyard Gearshift",url:"https://static.wixstatic.com/mp3/8cf24d_8fc67e84d8464acfa6f8b2daa4074df9.mp3"},
+{title:"Cathedral Crushdown",url:"https://static.wixstatic.com/mp3/8cf24d_94330df9b7bb428495580c2bb289d980.mp3"},
+{title:"Helltrain Havoc",url:"https://static.wixstatic.com/mp3/8cf24d_dfcb905136704738b1df280bf4eb8f50.mp3"},
+{title:"Blizzard Beatdown",url:"https://static.wixstatic.com/mp3/8cf24d_d0f35b6f27f24a8980cf7dc747833213.mp3"},
+{title:"Jackpot Jawbreaker",url:"https://static.wixstatic.com/mp3/8cf24d_5a584c6768fe4629bf9e89d1dbc32b12.mp3"},
+{title:"Prison Riot Rumble",url:"https://static.wixstatic.com/mp3/8cf24d_7cf902055b904d5fa9d73a1a1db3ce81.mp3"},
+{title:"Skyfire Slam",url:"https://static.wixstatic.com/mp3/8cf24d_67a1826768d14ff985a111ecc0d67534.mp3"}
+]
+});
+/* ---------- END ALBUM ---------- */
+/* ----------(Banana Man: Volume Two) (No Mercy))---------- */
+window.HubAlbums.push({
+title:"Banana Man: Volume Two (No Mercy)",
+artist:"King of Gods",
+year:"2025",
+release:"Original",
+releaseDate:"2025-09-26",
+coverUrl:"https://static.wixstatic.com/media/8cf24d_c9a7d8159cee4eadabc487d394b83c89~mv2.png",
+tracks:[
+{title:"Pitchfork Parade Massacre",url:"https://static.wixstatic.com/mp3/8cf24d_64755e30f35a4cebb44981ab1a271096.mp3"},
+{title:"Sulfur Street Showdown",url:"https://static.wixstatic.com/mp3/8cf24d_baafa743a8da4d8f8a8300153c8e7992.mp3"},
+{title:"Bone Yard Blitz",url:"https://static.wixstatic.com/mp3/8cf24d_cb153087dd2b4ae38f37c341a48d6014.mp3"},
+{title:"Guillotine Rumble",url:"https://static.wixstatic.com/mp3/8cf24d_632778eaedeb4ec68c0df73fbfcf3097.mp3"},
+{title:"Inferno Highway Slam",url:"https://static.wixstatic.com/mp3/8cf24d_352926ad5346448f88024a471c628c9c.mp3"},
+{title:"Carnival of Skulls",url:"https://static.wixstatic.com/mp3/8cf24d_8d9c39ec4b6e4dc0b98c0a6cb3f99aee.mp3"},
+{title:"Arena of Ash",url:"https://static.wixstatic.com/mp3/8cf24d_db94149c42284d70aa18ea43aa52b9be.mp3"},
+{title:"Volcano Vengeance",url:"https://static.wixstatic.com/mp3/8cf24d_c6fb0e8a660b4f6985cc807a098992be.mp3"},
+{title:"Graveyard Gearshift",url:"https://static.wixstatic.com/mp3/8cf24d_1a62230f62914397b5603925fa55e1bb.mp3"},
+{title:"Cathedral Crushdown",url:"https://static.wixstatic.com/mp3/8cf24d_86a7f9dc29574826b17ba88a91e52b7a.mp3"},
+{title:"Helltrain Havoc",url:"https://static.wixstatic.com/mp3/8cf24d_971fae2ed46e4e58b0daed931a69f904.mp3"},
+{title:"Blizzard Beatdown",url:"https://static.wixstatic.com/mp3/8cf24d_f13ba8b2ac1e483fb5d98e9d41b39543.mp3"},
+{title:"Jackpot Jawbreaker",url:"https://static.wixstatic.com/mp3/8cf24d_6bd2ffab1b8c4a6f9ee5be673f4a4034.mp3"},
+{title:"Prison Riot Rumble",url:"https://static.wixstatic.com/mp3/8cf24d_c22ef9a37d7a4a12a262978c8a3f971b.mp3"},
+{title:"Skyfire Slam",url:"https://static.wixstatic.com/mp3/8cf24d_c03288f7e3784bf9af33ee0b7f73a217.mp3"},
+{title:"Swamp Slam Showdown",url:"https://static.wixstatic.com/mp3/8cf24d_1856166ed82845758409d898bb5952ba.mp3"},
+{title:"Junkyard Justice",url:"https://static.wixstatic.com/mp3/8cf24d_95e988953b184abbbac1c8d2b5bad23d.mp3"},
+{title:"Thrill Kill Carnival",url:"https://static.wixstatic.com/mp3/8cf24d_8d130a8dd1be4f8ba92b4f56121dbad2.mp3"},
+{title:"Forge of Fury",url:"https://static.wixstatic.com/mp3/8cf24d_0ce98f095a5246a89f9df6493c228395.mp3"},
+{title:"Coliseum Carnage",url:"https://static.wixstatic.com/mp3/8cf24d_0c3db3424c2348f2a2c4006e04fae8f1.mp3"},
+{title:"Minecart Massacre",url:"https://static.wixstatic.com/mp3/8cf24d_99339d86c2254cff936088fc69bd5e3a.mp3"},
+{title:"Sewer Slaughter",url:"https://static.wixstatic.com/mp3/8cf24d_4be1d4d60f1341cdb90fb6ae8147316b.mp3"},
+{title:"Shipyard Shakedown",url:"https://static.wixstatic.com/mp3/8cf24d_8c7e99490632404a80d3f7cf30f5987b.mp3"},
+{title:"Magma Mayhem",url:"https://static.wixstatic.com/mp3/8cf24d_b4d69efd1fa949df9658effb7f29c839.mp3"},
+{title:"Frozen Fury",url:"https://static.wixstatic.com/mp3/8cf24d_643e6a31373d4f228364aaf977ae7224.mp3"},
+{title:"Graveyard Grind",url:"https://static.wixstatic.com/mp3/8cf24d_702018420541458ebe938a69956e7e9a.mp3"},
+{title:"Circus of Skulls",url:"https://static.wixstatic.com/mp3/8cf24d_8b901f2063ce4b7c938becba58eaa9da.mp3"},
+{title:"Lightning Laceration",url:"https://static.wixstatic.com/mp3/8cf24d_e28723a6a1484cae931da8b35d120d81.mp3"},
+{title:"Throne Breaker",url:"https://static.wixstatic.com/mp3/8cf24d_5b7bd23d02d34f49b40158697becbcde.mp3"},
+{title:"Kingfall Finale",url:"https://static.wixstatic.com/mp3/8cf24d_891710d8f316494db5f7dc9f66774047.mp3"}
+]
+});
+/* ---------- END ALBUM ---------- */
+/* ----------(Banana Man: Volume Two (Incomplete)---------- */
+window.HubAlbums.push({
+title:"Banana Man: Volume Two (Incomplete)",
+artist:"King of Gods",
+year:"2025",
+release:"Original Incomplete",
+releaseDate:"2025-08-01",
+coverUrl:"https://static.wixstatic.com/media/8cf24d_9774bd9a8a754d95b64c603f0a1c686b~mv2.jpg",
+tracks:[
+{title:"Heard the Devil Laugh",url:"https://static.wixstatic.com/mp3/8cf24d_b035eca8c6084d599708e972c3481c0c.mp3"},
+{title:"The Devil Threw Fire ",url:"https://static.wixstatic.com/mp3/8cf24d_ed3f5252afed4233868678e0b887fa19.mp3"},
+{title:"Horns Meet the Peel",url:"https://static.wixstatic.com/mp3/8cf24d_3113dcfb4227438a9653a76561dfc91f.mp3"},
+{title:"The Devil Awaited",url:"https://static.wixstatic.com/mp3/8cf24d_1acf4a14964d41b698ed055aa6b6de63.mp3"},
+{title:"Devil Slipped Hard",url:"https://static.wixstatic.com/mp3/8cf24d_c4cecfda22f64485b8b656fb28ef39f0.mp3"},
+{title:"The Devil Roared",url:"https://static.wixstatic.com/mp3/8cf24d_f0ce43f91f4142ea94164ed5d11b5f9f.mp3"}
+]
+});
+/* ---------- END ALBUM ---------- */
+/* ----------(Best Tree Service Vs the Devil)---------- */
+window.HubAlbums.push({
+title:"Best Tree Service Vs the Devil",
+artist:"King of Gods",
+year:"2024",
+release:"Original",
+releaseDate:"2024-12-09",
+coverUrl:"https://static.wixstatic.com/media/8cf24d_31f6897e72364930ae8c81840f064570~mv2.jpg",
+tracks:[
+{title:"Chainsaws Hummin'",url:"https://static.wixstatic.com/mp3/8cf24d_b225f13ebdae41a09026bbe24bbeb552.wav"},
+{title:"Chainsaw Roaring",url:"https://static.wixstatic.com/mp3/8cf24d_80f82e05533d4a54863fa88ace3b02e5.wav"},
+{title:"Axes Swing",url:"https://static.wixstatic.com/mp3/8cf24d_c1c5c4a8bf4b41a5b472fa25149d2861.wav"},
+{title:"Hatchet in Hand",url:"https://static.wixstatic.com/mp3/8cf24d_00960affbf4c490b83700ff8abe38b8c.wav"},
+{title:"Squad Rollin' Deep",url:"https://static.wixstatic.com/mp3/8cf24d_307a78e9c8ed4675a4cffe427da8b28e.wav"},
+{title:"Pulled Up",url:"https://static.wixstatic.com/mp3/8cf24d_2532e3fbac9148c6ae9deff2ae88006a.wav"},
+{title:"Florida Heat",url:"https://static.wixstatic.com/mp3/8cf24d_442df960b32141d38b7f091038bed3f8.wav"},
+{title:"Choppin' Trees",url:"https://static.wixstatic.com/mp3/8cf24d_c2a17aab023941e08a44ef94ae0c4f2d.wav"},
+{title:"Chainzaw Slashin'",url:"https://static.wixstatic.com/mp3/8cf24d_4e5373fa72f94065aa67c35f94d74f8b.wav"},
+{title:"Savage in the Heat",url:"https://static.wixstatic.com/mp3/8cf24d_121e1792c0c44f108773b33eb110460d.wav"},
+{title:"Chainsaws Roaring",url:"https://static.wixstatic.com/mp3/8cf24d_cdbe9899cdb5496b8c9e1255a6f3b188.wav"},
+{title:"Chops So Clean",url:"https://static.wixstatic.com/mp3/8cf24d_37c1767bee854e3190bb68756ed5505d.wav"},
+{title:"Chainsaws Humming",url:"https://static.wixstatic.com/mp3/8cf24d_fe5c8d0ec6b3480b804425e18f3ab1dc.wav"},
+{title:"Down in Florida",url:"https://static.wixstatic.com/mp3/8cf24d_327c57d4edb54f4c9fbefb4fa72df34f.wav"},
+{title:"Roots of Justice",url:"https://static.wixstatic.com/mp3/8cf24d_48ad3159fa83497b8bc18fdac8ae0209.wav"},
+{title:"Deep in Florida",url:"https://static.wixstatic.com/mp3/8cf24d_30de211c3ab44e60908934db3e197c5c.wav"},
+{title:"Army of Arborist",url:"https://static.wixstatic.com/mp3/8cf24d_c1dbbd3c72b6455595a578b7c099e752.wav"},
+{title:"Tree Crew in the South",url:"https://static.wixstatic.com/mp3/8cf24d_b585128245534c2db3ac4df6fceeb007.wav"}
+]
+});
+/* ---------- END ALBUM ---------- */
+/* ----------(Bounty Hunter's Odyssey)---------- */
+window.HubAlbums.push({
+title:"Bounty Hunter's Odyssey",
+artist:"King of Gods",
+year:"2024",
+release:"Original",
+releaseDate:"2024-12-21",
+coverUrl:"https://static.wixstatic.com/media/8cf24d_ba05c6c4309c40d5a423468405d302e1~mv2.jpg",
+tracks:[
+{title:"Phoenix (Dark Alley)",url:"https://static.wixstatic.com/mp3/8cf24d_d8921659ed544637811de78deb46ddf4.wav"},
+{title:"Phoenix to Las Vegas",url:"https://static.wixstatic.com/mp3/8cf24d_f6a7b262f8d6496fb1f6efd3f3e42574.wav"},
+{title:"Las Vegas (Casino Floor)",url:"https://static.wixstatic.com/mp3/8cf24d_8fbd82c8b56245bba5914e2351d9daf1.wav"},
+{title:"Las Vegas to Los Angeles",url:"https://static.wixstatic.com/mp3/8cf24d_7578ec94ef7841e682c33591e1ada365.wav"},
+{title:"Los Angeles (Sunset Boulevard)",url:"https://static.wixstatic.com/mp3/8cf24d_2025c5e9f9be440593c381cc155ef371.wav"},
+{title:"Los Angeles to Chicago",url:"https://static.wixstatic.com/mp3/8cf24d_6b438886952143fba1a9d434d60bc50b.wav"},
+{title:"Chicago (Backstreet Bar)",url:"https://static.wixstatic.com/mp3/8cf24d_24a0db7e3eba4ec38e5cd3dcb2258c91.wav"},
+{title:"Chicago to New York",url:"https://static.wixstatic.com/mp3/8cf24d_085d2679d7f54c33886abfc29186d6dc.wav"},
+{title:"New York (Skid Row)",url:"https://static.wixstatic.com/mp3/8cf24d_91b8a6b330964c02a7bd0317a56bcecb.wav"},
+{title:"New York to Miami",url:"https://static.wixstatic.com/mp3/8cf24d_1eff6cb07c3b400785bc4690b52fdcc6.wav"},
+{title:"Miami (Underground Club)",url:"https://static.wixstatic.com/mp3/8cf24d_b3747021461b42e39f413ef6f339a35c.wav"},
+{title:"Miami to Houston",url:"https://static.wixstatic.com/mp3/8cf24d_35f872aa48d24ddab49e1e32c0316c01.wav"},
+{title:"Houston (Drug Den)",url:"https://static.wixstatic.com/mp3/8cf24d_cc13a00b9002441faf24dfba5227d839.wav"},
+{title:"Houston to Atlanta",url:"https://static.wixstatic.com/mp3/8cf24d_a90c549378964bf0af5a05f60bca6f5b.wav"},
+{title:"Atlanta (Abandoned Warehouse)",url:"https://static.wixstatic.com/mp3/8cf24d_3f2936be250345fea0049bf3c50fec5a.wav"},
+{title:"Atlanta to Philadelphia",url:"https://static.wixstatic.com/mp3/8cf24d_be1ecb5cafd74f8a98e9f17ce07cf815.wav"},
+{title:"Philadelphia (Street Corner)",url:"https://static.wixstatic.com/mp3/8cf24d_b90ee6d3d15e4d588aab740f56f4fc30.wav"},
+{title:"Philadelphia to Detroit",url:"https://static.wixstatic.com/mp3/8cf24d_1c3a49fabf6c40e797094f1d9d3894ed.wav"},
+{title:"Detroit (Back Alley)",url:"https://static.wixstatic.com/mp3/8cf24d_de692b959c8848bb986b054a806ccc8c.wav"},
+{title:"Detroit to Boston",url:"https://static.wixstatic.com/mp3/8cf24d_6d44c61b399e4e6c970f32710f56fe32.wav"},
+{title:"Boston (Nightclub Basement)",url:"https://static.wixstatic.com/mp3/8cf24d_192eaa683d1c4609bf51a56196a5fe42.wav"},
+{title:"Boston to Seattle",url:"https://static.wixstatic.com/mp3/8cf24d_e7d6fadf7a7c4b1b9b6cf331ad9afa44.wav"},
+{title:"Seattle (Rainy Streets)",url:"https://static.wixstatic.com/mp3/8cf24d_cc356ccaa232428f95c69527a3ef68e6.wav"},
+{title:"Seattle to San Francisco",url:"https://static.wixstatic.com/mp3/8cf24d_f266a63c4ec14242af67e1d280c66ca7.wav"},
+{title:"San Francisco (Foggy Pier)",url:"https://static.wixstatic.com/mp3/8cf24d_3e574b5aef3d491f8ace706ca65c1d6b.wav"},
+{title:"San Francisco to Denver",url:"https://static.wixstatic.com/mp3/8cf24d_f3a3021c0c8f405197b633acb27bc146.wav"},
+{title:"Denver (Gritty Backroads)",url:"https://static.wixstatic.com/mp3/8cf24d_cc920a8818704d1ea516c29e1d645cd4.wav"},
+{title:"Denver to Minneapolis",url:"https://static.wixstatic.com/mp3/8cf24d_c4ca1c0b9a144ff1adbf110df9546a46.wav"},
+{title:"Minneapolis (Underground Tunnel)",url:"https://static.wixstatic.com/mp3/8cf24d_99e59e5be59c42a2876f64fa3c69282f.wav"},
+{title:"Minneapolis to Nashville",url:"https://static.wixstatic.com/mp3/8cf24d_2a7f8e39166c49f9804e5e6204a4067c.wav"},
+{title:"Nashville (Seedy Bar)",url:"https://static.wixstatic.com/mp3/8cf24d_20344e7675c84d06a4a1dede345fd814.wav"},
+{title:"Nashville to Baltimore",url:"https://static.wixstatic.com/mp3/8cf24d_0bd471dcc6f14b42b291737b3fe8f01d.wav"},
+{title:"Baltimore (Dark Market)",url:"https://static.wixstatic.com/mp3/8cf24d_37b6c68759c446639a31467cd2026b34.wav"},
+{title:"Baltimore to New Orleans",url:"https://static.wixstatic.com/mp3/8cf24d_50092d5318414de982b951bf6b39b047.wav"},
+{title:"New Orleans (Back Alley)",url:"https://static.wixstatic.com/mp3/8cf24d_1ab7cb10683546238609141e989e3f4e.wav"},
+{title:"New Orleans to Jacksonville",url:"https://static.wixstatic.com/mp3/8cf24d_f37a66001a4844f895b543195160e230.wav"},
+{title:"Jacksonville (Gritty Streets)",url:"https://static.wixstatic.com/mp3/8cf24d_db0f68f53cd640b7afee4b27cd9a029c.wav"},
+{title:"Jacksonville to Charlotte",url:"https://static.wixstatic.com/mp3/8cf24d_5ba2d96e6355411dbafcc306b47486de.wav"},
+{title:"Charlotte (Sketchy Bar)",url:"https://static.wixstatic.com/mp3/8cf24d_a8715696b010444ea604c503cb3c4acf.wav"},
+{title:"Charlotte to Kansas City",url:"https://static.wixstatic.com/mp3/8cf24d_e55528ede1b44377a27a0fdf0323cc6b.wav"},
+{title:"Kansas City (Underground Fight Club)",url:"https://static.wixstatic.com/mp3/8cf24d_a9cafd33d9384945add711e47c529cb1.wav"},
+{title:"Kansas City to Portland",url:"https://static.wixstatic.com/mp3/8cf24d_4a92fd1c05b84adda458c08678ece028.wav"},
+{title:"Portland (Dark Alley)",url:"https://static.wixstatic.com/mp3/8cf24d_fe5ee7099a934acab8145bdb747483a1.wav"},
+{title:"Portland to Salt Lake City",url:"https://static.wixstatic.com/mp3/8cf24d_089394540527414dbbf3cf45c8f325c9.wav"},
+{title:"Salt Lake City (Abandoned Lot)",url:"https://static.wixstatic.com/mp3/8cf24d_c6d75d026ffe4582ad6bc34593346936.wav"},
+{title:"Salt Lake City to Indianapolis",url:"https://static.wixstatic.com/mp3/8cf24d_f0990bd0a7924d71aa715e2b7d43cdac.wav"},
+{title:"Indianapolis (Gritty Streets)",url:"https://static.wixstatic.com/mp3/8cf24d_f4a63a413b7f4f6b8f1e7c2060f236e0.wav"},
+{title:"Indianapolis to Memphis",url:"https://static.wixstatic.com/mp3/8cf24d_1197d79bca7e47a889e902d727072c32.wav"},
+{title:"Memphis (Beale Street)",url:"https://static.wixstatic.com/mp3/8cf24d_23b32814fb7c4a90a0890f2b703600d1.wav"},
+{title:"Memphis to Cleveland",url:"https://static.wixstatic.com/mp3/8cf24d_4eea64725fe34b9489667c869bed5ad2.wav"},
+{title:"Cleveland (Backroom Deal)",url:"https://static.wixstatic.com/mp3/8cf24d_ef3a00568bcd406fabf8c66f7aaac3ff.wav"},
+{title:"Cleveland to Cincinnati",url:"https://static.wixstatic.com/mp3/8cf24d_efea753904da481ba0cf6d3729bff37a.wav"},
+{title:" Cincinnati (Dark Warehouse)",url:"https://static.wixstatic.com/mp3/8cf24d_e9a869de6d2747a3852748dddfa565da.wav"},
+{title:"Cincinnati to Richmond",url:"https://static.wixstatic.com/mp3/8cf24d_03ca0a9a529a4ac1a5a7e4296af4347f.wav"},
+{title:"Richmond (Run-Down Neighborhood)",url:"https://static.wixstatic.com/mp3/8cf24d_249ea62755a54104afef6ef38ce319ce.wav"},
+{title:"Richmond to Tucson",url:"https://static.wixstatic.com/mp3/8cf24d_f71835c586f04143adc12a73fe2ba384.wav"},
+{title:"Tucson (Desert Hideout)",url:"https://static.wixstatic.com/mp3/8cf24d_43b025b980b14a3caafc2de2eb796a59.wav"},
+{title:"Tucson to Omaha",url:"https://static.wixstatic.com/mp3/8cf24d_67c3fd2703764692b9664dbe7e1760ef.wav"},
+{title:"Omaha (Abandoned Factory)",url:"https://static.wixstatic.com/mp3/8cf24d_e20e38e9b1cd4fa9a8780a8dc16815b1.wav"},
+{title:"Omaha to Albany",url:"https://static.wixstatic.com/mp3/8cf24d_23ef622746b643399940805876687247.wav"},
+{title:"Albany (Street Corner)",url:"https://static.wixstatic.com/mp3/8cf24d_7683cb4fda624a419a5221ad92d87255.wav"},
+{title:"Albany to Hartford",url:"https://static.wixstatic.com/mp3/8cf24d_1cb3e63dd19a464fba186a2e1b2bfe83.wav"},
+{title:"Hartford (Hidden Bar)",url:"https://static.wixstatic.com/mp3/8cf24d_935ef8c576d747139f5c2370a6eddf03.wav"},
+{title:"Hartford to Boise",url:"https://static.wixstatic.com/mp3/8cf24d_e4719ad6772844f589ecc3f4973f3cf5.wav"},
+{title:"Boise (Gritty Backstreet)",url:"https://static.wixstatic.com/mp3/8cf24d_65c558ef5dc7487ca23011bfc914c81d.wav"},
+{title:"Boise to Providence",url:"https://static.wixstatic.com/mp3/8cf24d_3ddbbf3c3f764deb970b0fe528bbd2a6.wav"},
+{title:"Providence (Underground Market)",url:"https://static.wixstatic.com/mp3/8cf24d_b361607111544965b0362a08b6a66670.wav"},
+{title:"My Mind to Your Heart",url:"https://static.wixstatic.com/mp3/8cf24d_951838fe2bc64fe2b14143b7f7c944dc.wav"},
+{title:"Final Showdown (Dark Domain)",url:"https://static.wixstatic.com/mp3/8cf24d_3d80b65eea8d47859c0755b6e0691a95.wav"}
+]
+});
+/* ---------- END ALBUM ---------- */
+/* ----------(Can't Pray It Away)---------- */
+window.HubAlbums.push({
+title:"Can't Pray It Away",
+artist:"King of Gods",
+year:"2025",
+release:"Original",
+releaseDate:"2025-01-03",
+coverUrl:"https://static.wixstatic.com/media/8cf24d_4abbbb12562d42debe60e3835b88efb2~mv2.jpg",
+tracks:[
+{title:"Stars and Stripes",url:"https://static.wixstatic.com/mp3/8cf24d_f2923a712c194c59a59c57ff7091d59e.wav"},
+{title:"Bound By Honor",url:"https://static.wixstatic.com/mp3/8cf24d_7acb86fefc1a433296daf46511849307.wav"},
+{title:"Hearts of Steel",url:"https://static.wixstatic.com/mp3/8cf24d_698bc61d9dd74370bf76f3cb87649ea0.wav"},
+{title:"For True Peace",url:"https://static.wixstatic.com/mp3/8cf24d_7c4d7166bb28495f9ace99f05be4d3dd.wav"},
+{title:"Peace Will Reign",url:"https://static.wixstatic.com/mp3/8cf24d_45785a775d534954b5f66f70700d4b58.wav"},
+{title:"Good Versus Evil",url:"https://static.wixstatic.com/mp3/8cf24d_f3acc24b687443e1bd945656f6ce1221.wav"},
+{title:"We Gotta Fight",url:"https://static.wixstatic.com/mp3/8cf24d_f7ada11615764aa48154b84f90c8e65c.wav"},
+{title:"We Gotta Wade",url:"https://static.wixstatic.com/mp3/8cf24d_f622afc8e358449c9570c72c61edd151.wav"},
+{title:"Good Fights Evil",url:"https://static.wixstatic.com/mp3/8cf24d_ea01baabec444a4887024b81c9ac98b0.wav"},
+{title:"Courage and Strength",url:"https://static.wixstatic.com/mp3/8cf24d_de95478c38cb4e21b9f1c95bad3c511a.wav"}
+]
+});
+/* ---------- END ALBUM ---------- */
+/* ----------(Chains of the Fallen)---------- */
+window.HubAlbums.push({
+title:"Chains of the Fallen",
+artist:"King of Gods",
+year:"2025",
+release:"Original",
+releaseDate:"2025-10-17",
+coverUrl:"https://static.wixstatic.com/media/8cf24d_d2d04c39fa5b44998f8d49b16b7a42ec~mv2.png",
+tracks:[
+{title:"Chains of the Fallen",url:"https://static.wixstatic.com/mp3/8cf24d_db1b7a8857004d859e5c77baca555a07.mp3"},
+{title:"Wings of the Reckoning",url:"https://static.wixstatic.com/mp3/8cf24d_a9643aa56a3348c7b585b7c96cb9f339.mp3"},
+{title:"Heart of Fire, Devil of Dust",url:"https://static.wixstatic.com/mp3/8cf24d_8283df410e7d4d198869375dd9cb3427.mp3"},
+{title:"The Devil's Going Down Hard",url:"https://static.wixstatic.com/mp3/8cf24d_ac1451155871415e9f8536c5582ceee4.mp3"},
+{title:"Wrath in the Storm",url:"https://static.wixstatic.com/mp3/8cf24d_ae84f04ed40c4aea81fe8a63aba464c7.mp3"},
+{title:"Hell at My Heels",url:"https://static.wixstatic.com/mp3/8cf24d_cf1064656d414a69860bd74ac6e918e3.mp3"},
+{title:"Forge of the Unbroken",url:"https://static.wixstatic.com/mp3/8cf24d_b22b4ef4579a418cb915332f905d0760.mp3"},
+{title:"Brothers of the Storm",url:"https://static.wixstatic.com/mp3/8cf24d_294e9d56900448f48bb3180fb2fb8735.mp3"},
+{title:"Deal at Deadman's Cross",url:"https://static.wixstatic.com/mp3/8cf24d_dbdff0329a704c338af0a4fe2bcf27c6.mp3"},
+{title:"The Devil Don't Own Me",url:"https://static.wixstatic.com/mp3/8cf24d_7b677e551132427fbe092ddc718333bb.mp3"}
+]
+});
+/* ---------- END ALBUM ---------- */
+/* ----------(Chainsaw Warrior)---------- */
+window.HubAlbums.push({
+title:"Chainsaw Warrior",
+artist:"King of Gods",
+year:"2025",
+release:"Original",
+releaseDate:"2025-02-04",
+coverUrl:"https://static.wixstatic.com/media/8cf24d_8c6dcfbc256d440b8db906d1b8cdce05~mv2.jpg",
+tracks:[
+{title:"Chainsaw Warrior",url:"https://static.wixstatic.com/mp3/8cf24d_38334179f28c4e978269310f5e8614e5.wav"},
+{title:"Bloodstorm Avenger",url:"https://static.wixstatic.com/mp3/8cf24d_c31eadfbce734c45be25c57566f1ff7b.wav"},
+{title:"Iron Fist Rampage",url:"https://static.wixstatic.com/mp3/8cf24d_100bee9786e5441aa2c6526d58581e3a.wav"},
+{title:"Steel Vengeance",url:"https://static.wixstatic.com/mp3/8cf24d_9143a41900d645eb9b85261a93f6739a.wav"},
+{title:"Nightfall Hunter",url:"https://static.wixstatic.com/mp3/8cf24d_77bd668f0db24425a39f46214ff422ad.wav"},
+{title:"Savage Blade Symphony",url:"https://static.wixstatic.com/mp3/8cf24d_7cb0c4eb83f24e6c8881dea4ac8044d0.wav"},
+{title:"Wraith of the Wasteland",url:"https://static.wixstatic.com/mp3/8cf24d_705aeb32492445f7b44083cf8823bebe.wav"},
+{title:"Apocalypse Reaver",url:"https://static.wixstatic.com/mp3/8cf24d_f5e559b223ad421d83f9298a5ba0d793.wav"},
+{title:"Raging Inferno",url:"https://static.wixstatic.com/mp3/8cf24d_fb0222580ba342e383c9349318b2892a.wav"},
+{title:"Skull Crusher's Anthem",url:"https://static.wixstatic.com/mp3/8cf24d_43f6aea6a586469e9270c12130c14442.wav"}
+]
+});
+/* ---------- END ALBUM ---------- */
+
+/*-----End Album List-----*/
+/*(E)👑🎸👑(KING OF GODS CARTRAGE)👑🎸👑(E)*//*(19)(S)🤬(OMEGA ENGINE)🤬(S)(19)*/
+const OMEGA={
+ver:"19.2",
+Cfg:{dprCap:2,dtCap:.05},
+Util:{
+clamp:(v,a,b)=>Math.max(a,Math.min(b,v)),
+lerp:(a,b,t)=>a+(b-a)*t,
+rand:(a=0,b=1)=>a+Math.random()*(b-a),
+randi:(a,b)=>Math.floor(a+Math.random()*(b-a+1)),
+chance:p=>Math.random()<p,
+now:()=>performance.now(),
+uid:(p="id")=>p+"_"+Math.random().toString(16).slice(2)+Date.now().toString(16)
+},
+Input:{
+ready:false,
+root:null,
+keys:{},
+mouse:{x:0,y:0,down:false,btn:0},
+touch:{x:0,y:0,down:false},
+_handlers:null,
+init:function(o={}){
+if(this.ready) return;
+this.ready=true;
+this.root=(typeof o.root==="string")?document.querySelector(o.root):(o.root||document.querySelector("#KingOfGods-shell")||document.body);
+const r=this.root||document.body;
+const h={};
+h.keydown=e=>{this.keys[e.key]=true;};
+h.keyup=e=>{this.keys[e.key]=false;};
+
+h.pmove=e=>{this.mouse.x=e.clientX;this.mouse.y=e.clientY;};
+h.pdown=e=>{this.mouse.down=true;this.mouse.btn=e.button||0;try{e.target&&e.target.setPointerCapture&&e.target.setPointerCapture(e.pointerId);}catch(err){};};
+h.pup=()=>{this.mouse.down=false;};
+h.pcancel=()=>{this.mouse.down=false;};
+h.tstart=e=>{const t=e.changedTouches&&e.changedTouches[0];if(!t) return;this.touch.down=true;this.touch.x=t.clientX;this.touch.y=t.clientY;};
+h.tmove=e=>{const t=e.changedTouches&&e.changedTouches[0];if(!t) return;this.touch.x=t.clientX;this.touch.y=t.clientY;};
+h.tend=()=>{this.touch.down=false;};
+h.tcancel=()=>{this.touch.down=false;};
+window.addEventListener("keydown",h.keydown,{passive:true});
+window.addEventListener("keyup",h.keyup,{passive:true});
+r.addEventListener("pointermove",h.pmove,{passive:true});
+r.addEventListener("pointerdown",h.pdown,{passive:true});
+r.addEventListener("pointerup",h.pup,{passive:true});
+r.addEventListener("pointercancel",h.pcancel,{passive:true});
+r.addEventListener("touchstart",h.tstart,{passive:true});
+r.addEventListener("touchmove",h.tmove,{passive:true});
+r.addEventListener("touchend",h.tend,{passive:true});
+r.addEventListener("touchcancel",h.tcancel,{passive:true});
+this._handlers=h;
+},
+destroy:function(){
+if(!this.ready) return;
+this.ready=false;
+const r=this.root||document.body;
+const h=this._handlers;
+if(h){
+try{window.removeEventListener("keydown",h.keydown,{passive:true});}catch(e){window.removeEventListener("keydown",h.keydown);}
+try{window.removeEventListener("keyup",h.keyup,{passive:true});}catch(e){window.removeEventListener("keyup",h.keyup);}
+try{r.removeEventListener("pointermove",h.pmove,{passive:true});}catch(e){r.removeEventListener("pointermove",h.pmove);}
+try{r.removeEventListener("pointerdown",h.pdown,{passive:true});}catch(e){r.removeEventListener("pointerdown",h.pdown);}
+try{r.removeEventListener("pointerup",h.pup,{passive:true});}catch(e){r.removeEventListener("pointerup",h.pup);}
+try{r.removeEventListener("pointercancel",h.pcancel,{passive:true});}catch(e){r.removeEventListener("pointercancel",h.pcancel);}
+try{r.removeEventListener("touchstart",h.tstart,{passive:true});}catch(e){r.removeEventListener("touchstart",h.tstart);}
+try{r.removeEventListener("touchmove",h.tmove,{passive:true});}catch(e){r.removeEventListener("touchmove",h.tmove);}
+try{r.removeEventListener("touchend",h.tend,{passive:true});}catch(e){r.removeEventListener("touchend",h.tend);}
+try{r.removeEventListener("touchcancel",h.tcancel,{passive:true});}catch(e){r.removeEventListener("touchcancel",h.tcancel);}
+}
+this._handlers=null;
+this.root=null;
+this.keys={};
+this.mouse={x:0,y:0,down:false,btn:0};
+this.touch={x:0,y:0,down:false};
+},
+isDown:function(k){return !!this.keys[k];},
+anyDown:function(){for(const k in this.keys){if(this.keys[k]) return true;}return false;}
+},
+Gfx:{
+make:function(o={}){
+const mountSel=o.mount||"#KingOfGods-app-mount";
+const mount=(typeof mountSel==="string")?document.querySelector(mountSel):(mountSel||document.body);
+const c=document.createElement("canvas");
+const ctx=c.getContext("2d",{alpha:true,desynchronized:true});
+c.style.width="100%";
+c.style.height="auto";
+c.style.display="block";
+c.style.imageRendering=o.pixel===false?"auto":"pixelated";
+c.setAttribute("aria-label",o.label||"OMEGA Canvas");
+const api={
+canvas:c,ctx:ctx,
+w:o.w||960,h:o.h||540,
+dpr:1,
+mounted:false,
+clear:function(){ctx.clearRect(0,0,c.width,c.height);},
+setPixel:function(on){c.style.imageRendering=on?"pixelated":"auto";},
+resizeToMount:function(){
+if(!mount) return;
+const r=mount.getBoundingClientRect();
+const cssW=Math.max(1,Math.floor(r.width));
+const cssH=o.fit==="height"?Math.max(1,Math.floor(r.height)):Math.max(1,Math.floor(cssW*(this.h/this.w)));
+const dpr=Math.min(window.devicePixelRatio||1,OMEGA.Cfg.dprCap);
+this.dpr=dpr;
+c.width=Math.max(1,Math.floor(cssW*dpr));
+c.height=Math.max(1,Math.floor(cssH*dpr));
+ctx.setTransform(dpr,0,0,dpr,0,0);
+},
+mount:function(){
+if(this.mounted) return this;
+this.mounted=true;
+(mount||document.body).appendChild(c);
+this.resizeToMount();
+return this;
+},
+unmount:function(){
+if(!this.mounted) return this;
+this.mounted=false;
+if(this._ro) try{this._ro.disconnect();}catch(e){}
+if(this._onrsz) try{window.removeEventListener("resize",this._onrsz);}catch(e){}
+if(c.parentNode) c.parentNode.removeChild(c);
+this._ro=null;
+this._onrsz=null;
+return this;
+}
+};
+const ro=("ResizeObserver" in window)&&mount?new ResizeObserver(()=>api.resizeToMount()):null;
+if(ro) ro.observe(mount);
+const onrsz=()=>api.resizeToMount();
+window.addEventListener("resize",onrsz,{passive:true});
+api._ro=ro;
+api._onrsz=onrsz;
+api.mount();
+return api;
+}
+},
+Sfx:{
+safe:function(){
+if(typeof App!=="undefined"&&App&&App.isSafeMode) return true;
+if(document.body&&document.body.classList.contains("KingOfGods-safe-mode")) return true;
+return false;
+},
+play:function(type){
+if(this.safe()) return;
+if(typeof SoundSys==="undefined"||!SoundSys) return;
+if(!SoundSys.ctx) return;
+if(type==="click"){SoundSys.trigger("click");return;}
+if(type==="hover"){SoundSys.trigger("hover");return;}
+if(type==="switch"){SoundSys.trigger("switch");return;}
+if(type==="success"){SoundSys.trigger("success");return;}
+if(type==="error"){SoundSys.trigger("error");return;}
+if(type==="explosion"){SoundSys.playTone(110,"sawtooth",.35,.45);SoundSys.playTone(55,"square",.28,.35);return;}
+if(type==="powerup"){SoundSys.playTone(420,"sine",.10,.22);setTimeout(()=>SoundSys.playTone(820,"sine",.16,.22),90);return;}
+if(type==="laser"){SoundSys.playTone(880,"sawtooth",.10,.20,220);return;}
+}
+},
+Loop:{
+id:0,last:0,run:false,
+start:function(cb){
+this.stop();
+this.run=true;
+this.last=performance.now();
+const step=(now)=>{
+if(!this.run) return;
+let dt=(now-this.last)/1000;
+this.last=now;
+dt=Math.min(dt,OMEGA.Cfg.dtCap);
+cb(dt,now);
+this.id=requestAnimationFrame(step);
+};
+this.id=requestAnimationFrame(step);
+},
+stop:function(){
+this.run=false;
+if(this.id) cancelAnimationFrame(this.id);
+this.id=0;
+}
+}
+};
+/*(19)(E)🤬(OMEGA ENGINE)🤬(E)(19)*/
+/*(20)(S)🤬(SOUND SYSTEM)🤬(S)(20)*/
+const SoundSys={
+ctx:null,master:null,limiter:null,
+lastHover:0,muted:false,vol:0.3,
+root:null,_unlockArmed:false,_unlockFn:null,
+safe:function(){if(typeof App!=="undefined"&&App&&App.isSafeMode) return true;if(document.body&&document.body.classList.contains("KingOfGods-safe-mode")) return true;return false;},
+init:function(o={}){
+if(this.ctx) return;
+if(this.safe()) return;
+const AC=window.AudioContext||window.webkitAudioContext;
+if(!AC) return;
+this.root=(typeof o.root==="string")?document.querySelector(o.root):(o.root||document.querySelector("#KingOfGods-shell")||document.body);
+this.ctx=new AC();
+this.master=this.ctx.createGain();
+this.master.gain.value=this.muted?0:this.vol;
+this.limiter=this.ctx.createDynamicsCompressor();
+this.limiter.threshold.value=-10;
+this.limiter.ratio.value=12;
+this.master.connect(this.limiter);
+this.limiter.connect(this.ctx.destination);
+this._armUnlock();
+},
+_armUnlock:function(){
+if(!this.ctx||this._unlockArmed) return;
+this._unlockArmed=true;
+const r=this.root||document.body;
+const unlock=()=>{
+this._disarmUnlock();
+try{if(this.ctx&&this.ctx.state==="suspended") this.ctx.resume();}catch(e){}
+};
+this._unlockFn=unlock;
+r.addEventListener("pointerdown",unlock,{passive:true,once:true});
+r.addEventListener("touchstart",unlock,{passive:true,once:true});
+r.addEventListener("keydown",unlock,{passive:true,once:true});
+r.addEventListener("click",unlock,{passive:true,once:true});
+},
+_disarmUnlock:function(){
+if(!this._unlockArmed) return;
+this._unlockArmed=false;
+const r=this.root||document.body;
+const u=this._unlockFn;
+this._unlockFn=null;
+if(!u) return;
+try{r.removeEventListener("pointerdown",u);}catch(e){}
+try{r.removeEventListener("touchstart",u);}catch(e){}
+try{r.removeEventListener("keydown",u);}catch(e){}
+try{r.removeEventListener("click",u);}catch(e){}
+},
+destroy:function(){
+this._disarmUnlock();
+if(this.master&&this.ctx) try{this.master.disconnect();}catch(e){}
+if(this.limiter&&this.ctx) try{this.limiter.disconnect();}catch(e){}
+if(this.ctx) try{this.ctx.close();}catch(e){}
+this.ctx=null;this.master=null;this.limiter=null;
+this.root=null;
+this.lastHover=0;
+},
+ensure:function(){
+if(this.safe()) return false;
+if(!this.ctx) this.init();
+if(!this.ctx) return false;
+if(this.ctx.state==="suspended") try{this.ctx.resume();}catch(e){}
+return !this.muted;
+},
+setVolume:function(v){
+this.vol=Math.max(0,Math.min(1,v));
+if(!this.ctx) this.init();
+if(this.master&&this.ctx) this.master.gain.setTargetAtTime(this.muted?0:this.vol,this.ctx.currentTime,0.08);
+return this.vol;
+},
+toggleMute:function(){
+this.muted=!this.muted;
+if(!this.ctx) this.init();
+if(this.master&&this.ctx) this.master.gain.setTargetAtTime(this.muted?0:this.vol,this.ctx.currentTime,0.1);
+return this.muted;
+},
+playTone:function(f,t,d,v=1,s=null){
+if(!this.ensure()) return;
+const ct=this.ctx.currentTime;
+const osc=this.ctx.createOscillator();
+const g=this.ctx.createGain();
+osc.type=t;
+osc.frequency.setValueAtTime(f,ct);
+if(s) osc.frequency.exponentialRampToValueAtTime(Math.max(1,s),ct+d);
+g.gain.setValueAtTime(Math.max(0.0001,v),ct);
+g.gain.exponentialRampToValueAtTime(0.0001,ct+d);
+osc.connect(g);
+g.connect(this.master);
+osc.start(ct);
+osc.stop(ct+d+0.12);
+},
+trigger:function(n){
+if(this.safe()) return;
+if(n==="hover"){
+const now=performance.now();
+if(now-this.lastHover<100) return;
+this.lastHover=now;
+}
+if(n==="hover"){this.playTone(800,"sine",0.03,0.05);return;}
+if(n==="click"){this.playTone(1200,"sine",0.10,0.30,600);return;}
+if(n==="switch"){this.playTone(150,"square",0.15,0.40,40);this.playTone(400,"sawtooth",0.05,0.10);return;}
+if(n==="success"){this.playTone(880,"sine",0.40,0.30);setTimeout(()=>this.playTone(1108,"sine",0.40,0.30),100);return;}
+if(n==="error"){this.playTone(150,"sawtooth",0.30,0.40,100);return;}
+}
+};
+/*(20)(E)🤬(SOUND SYSTEM)🤬(E)(20)*/
+/*(21)(S)🤬(APP CORE)🤬(S)(21)*/
+const App={
+themes:[
+"KingOfGods-theme-toxic","KingOfGods-theme-cyber","KingOfGods-theme-gold","KingOfGods-theme-neon","KingOfGods-theme-lava","KingOfGods-theme-ice",
+"KingOfGods-theme-matrix","KingOfGods-theme-royal","KingOfGods-theme-sunset","KingOfGods-theme-pink","KingOfGods-theme-void","KingOfGods-theme-slate","KingOfGods-theme-blood",
+"KingOfGods-theme-copper","KingOfGods-theme-ocean","KingOfGods-theme-amber","KingOfGods-theme-frost","KingOfGods-theme-radio","KingOfGods-theme-rose","KingOfGods-theme-ultra","KingOfGods-theme-titan"
+],
+currentTheme:"KingOfGods-theme-toxic",
+touchStartX:null,isMilitaryTime:false,clockTimer:null,wakeLock:null,
+root:null,docEl:null,storeNS:"app",_bound:false,
+SafeCartridge:{
+meta:{title:"SAFE MODE",version:"v10.0"},
+menu:[{label:"REBOOT SYSTEM",action:"dashboard"}],
+views:{dashboard:`<h2>SYSTEM READY</h2><div class="KingOfGods-status-text">[ SLOT EMPTY: INSERT CARTRIDGE ]</div><p>OMEGA Engine Online.<br>Waiting for input.</p>`}
+},
+activeCartridge:null,isSafeMode:false,
+q:function(sel){return this.root?this.root.querySelector(sel):null;},
+qa:function(sel){return this.root?Array.from(this.root.querySelectorAll(sel)):[];},
+k:function(s){return this.storeNS+"_"+s;},
+init:function(o={}){
+this.root=(typeof o.root==="string")?document.querySelector(o.root):(o.root||document.querySelector("#KingOfGods-shell"));
+if(!this.root) this.root=document.body;
+this.docEl=document.documentElement;
+this.storeNS=this.root.id?this.root.id:"shell";
+SoundSys.init({root:this.root});
+if(typeof OMEGA!=="undefined"&&OMEGA&&OMEGA.Input) OMEGA.Input.init();
+let useSafe=false;
+if(typeof Cartridge==="undefined") useSafe=true;
+else if(!Cartridge||!Cartridge.views||!Cartridge.views.dashboard) useSafe=true;
+if(useSafe){
+this.activeCartridge=this.SafeCartridge;
+this.isSafeMode=true;
+}else{
+this.activeCartridge=Cartridge;
+this.isSafeMode=false;
+const savedTheme=localStorage.getItem(this.k("theme"));
+if(savedTheme&&this.themes.includes(savedTheme)) this.currentTheme=savedTheme;
+}
+const savedTime=localStorage.getItem(this.k("time_format"));
+if(savedTime==="military") this.isMilitaryTime=true;
+if(!this.activeCartridge.menu||!Array.isArray(this.activeCartridge.menu)) this.activeCartridge.menu=[];
+if(!this.activeCartridge.meta) this.activeCartridge.meta={title:"APP"};
+const titleEl=this.q("#KingOfGods-app-title");
+if(titleEl) titleEl.innerText=this.activeCartridge.meta.title;
+document.title=`${this.activeCartridge.meta.title} // SHELL`;
+if(this.activeCartridge.onInit){try{this.activeCartridge.onInit();}catch(e){console.error("Cartridge Init Failed:",e);}}
+this.applyTheme();
+this.buildMenu();
+this.spawnEmbers();
+this.setupListeners();
+this.startClock();
+const fromHash=window.location.hash.replace("#","")||"dashboard";
+this.render(fromHash);
+window.addEventListener("hashchange",()=>{
+const v=window.location.hash.replace("#","")||"dashboard";
+this.render(v);
+});
+this.checkLayout();
+},
+buildMenu:function(){
+const menuContainer=this.q("#KingOfGods-drawer-content");
+if(!menuContainer) return;
+menuContainer.innerHTML="";
+const mkBtn=(label,action,cls="KingOfGods-drawer-item KingOfGods-sfx-click")=>{
+const el=document.createElement("div");
+el.className=cls;
+el.tabIndex=0;
+el.innerText=label;
+el.onclick=()=>this.navigate(action);
+el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();this.navigate(action);}});
+return el;
+};
+const addThemeDropdown=()=>{
+const wrap=document.createElement("div");
+wrap.className="KingOfGods-drawer-acc";
+wrap.setAttribute("aria-expanded","false");
+const btn=document.createElement("button");
+btn.type="button";
+btn.className="KingOfGods-drawer-acc-btn KingOfGods-sfx-click KingOfGods-theme-lock";
+btn.innerHTML=`<span>THEME SELECTION</span><span class="KingOfGods-drawer-acc-caret"></span>`;
+btn.onclick=()=>{
+if(this.isSafeMode){SoundSys.trigger("error");return;}
+const exp=wrap.getAttribute("aria-expanded")==="true";
+wrap.setAttribute("aria-expanded",exp?"false":"true");
+};
+const panel=document.createElement("div");
+panel.className="KingOfGods-drawer-acc-panel";
+for(let i=0;i<this.themes.length;i++){
+const th=this.themes[i];
+const sbtn=document.createElement("button");
+sbtn.type="button";
+sbtn.className="KingOfGods-drawer-subitem KingOfGods-sfx-click KingOfGods-theme-lock";
+sbtn.innerHTML=`<span>${th.replace("KingOfGods-theme-","").toUpperCase()}</span><span>›</span>`;
+sbtn.onclick=()=>{
+if(this.isSafeMode){SoundSys.trigger("error");return;}
+this.currentTheme=th;
+this.applyTheme();
+localStorage.setItem(this.k("theme"),this.currentTheme);
+this.spawnEmbers();
+};
+panel.appendChild(sbtn);
+}
+wrap.appendChild(btn);
+wrap.appendChild(panel);
+menuContainer.appendChild(wrap);
+};
+addThemeDropdown();
+this.activeCartridge.menu.forEach(item=>{
+if(item&&Array.isArray(item.items)&&item.items.length){
+const wrap=document.createElement("div");
+wrap.className="KingOfGods-drawer-acc";
+wrap.setAttribute("aria-expanded","false");
+const btn=document.createElement("button");
+btn.type="button";
+btn.className="KingOfGods-drawer-acc-btn KingOfGods-sfx-click";
+btn.innerHTML=`<span>${item.label||"MENU"}</span><span class="KingOfGods-drawer-acc-caret"></span>`;
+btn.onclick=()=>{
+const exp=wrap.getAttribute("aria-expanded")==="true";
+wrap.setAttribute("aria-expanded",exp?"false":"true");
+};
+const panel=document.createElement("div");
+panel.className="KingOfGods-drawer-acc-panel";
+item.items.forEach(sub=>{
+const sbtn=document.createElement("button");
+sbtn.type="button";
+sbtn.className="KingOfGods-drawer-subitem KingOfGods-sfx-click";
+sbtn.innerHTML=`<span>${sub.label||"ITEM"}</span><span>›</span>`;
+sbtn.onclick=()=>this.navigate(sub.action||"dashboard");
+panel.appendChild(sbtn);
+});
+wrap.appendChild(btn);
+wrap.appendChild(panel);
+menuContainer.appendChild(wrap);
+}else{
+menuContainer.appendChild(mkBtn(item.label||"ITEM",item.action||"dashboard"));
+}
+});
+},
+setupListeners:function(){
+if(this._bound) return;
+this._bound=true;
+this.root.addEventListener("click",e=>{
+const t=e.target.closest("button,a,.KingOfGods-interactive,.KingOfGods-drawer-item,.KingOfGods-drawer-subitem,.KingOfGods-drawer-acc-btn,.KingOfGods-armored-btn,h1,#KingOfGods-footer-center,#KingOfGods-clock-display");
+if(!t||!this.root.contains(t)) return;
+if(t.classList.contains("KingOfGods-sfx-switch")) SoundSys.trigger("switch");
+else if(t.classList.contains("KingOfGods-sfx-success")) SoundSys.trigger("success");
+else if(t.classList.contains("KingOfGods-sfx-error")) SoundSys.trigger("error");
+else SoundSys.trigger("click");
+});
+this.root.addEventListener("pointerover",e=>{
+const t=e.target.closest("button,a,.KingOfGods-interactive,.KingOfGods-drawer-item,.KingOfGods-drawer-subitem,.KingOfGods-drawer-acc-btn,.KingOfGods-armored-btn,h1,#KingOfGods-footer-center,#KingOfGods-clock-display");
+if(t&&this.root.contains(t)) SoundSys.trigger("hover");
+},{passive:true});
+window.addEventListener("keydown",e=>{
+const a=document.activeElement;
+if(!a||!this.root.contains(a)) return;
+if(e.key==="Escape") this.toggleDrawer(false);
+},{passive:true});
+this.root.addEventListener("touchstart",e=>{
+if(!this.root.classList.contains("KingOfGods-menu-open")){this.touchStartX=null;return;}
+const d=this.q("#KingOfGods-app-drawer");if(!d){this.touchStartX=null;return;}
+const t=e.changedTouches[0];if(!t){this.touchStartX=null;return;}
+const x=t.clientX;
+const r=d.getBoundingClientRect();
+if(x<r.right-20){this.touchStartX=null;return;}
+this.touchStartX=x;
+},{passive:true});
+this.root.addEventListener("touchend",e=>{
+if(this.touchStartX===null) return;
+const t=e.changedTouches[0];if(!t){this.touchStartX=null;return;}
+const diff=t.clientX-this.touchStartX;
+if(diff>50) this.toggleDrawer(false);
+this.touchStartX=null;
+},{passive:true});
+document.addEventListener("fullscreenchange",()=>this.checkLayout(),{passive:true});
+/* 🔧 FIXED: Stable resize handler for fullscreen */
+let resizeTimeout;
+const handleResize = () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    this.updateScale();
+    this.checkLayout();
+  }, 100);
+};
+window.addEventListener("resize", handleResize, { passive: true });
+},
+toggleTheme:function(){
+if(this.isSafeMode){SoundSys.trigger("error");return;}
+let idx=this.themes.indexOf(this.currentTheme);
+idx=(idx+1)%this.themes.length;
+this.currentTheme=this.themes[idx];
+this.applyTheme();
+localStorage.setItem(this.k("theme"),this.currentTheme);
+this.spawnEmbers();
+},
+invertTheme:function(){
+if(this.isSafeMode){SoundSys.trigger("error");return;}
+document.body.classList.toggle("KingOfGods-invert-theme");
+},
+toggleInvert:function(){
+this.invertTheme();
+},
+applyTheme:function(){
+for(let i=0;i<this.themes.length;i++) document.body.classList.remove(this.themes[i]);
+document.body.classList.add(this.currentTheme);
+},
+toggleDrawer:function(show){
+const tb=this.q("#KingOfGods-menu-toggle");
+const d=this.q("#KingOfGods-app-drawer");
+const o=this.q("#KingOfGods-drawer-overlay");
+if(!tb||!d||!o) return;
+if(show){
+this.root.classList.add("KingOfGods-menu-open");
+d.setAttribute("aria-hidden","false");
+tb.setAttribute("aria-expanded","true");
+setTimeout(()=>{const c=this.q("#KingOfGods-drawer-close");if(c) c.focus();},100);
+}else{
+this.root.classList.remove("KingOfGods-menu-open");
+d.setAttribute("aria-hidden","true");
+tb.setAttribute("aria-expanded","false");
+tb.focus();
+}
+},
+toggleFullscreen:async function(){
+const root=this.docEl;
+const req=root.requestFullscreen||root.webkitRequestFullscreen;
+const exit=document.exitFullscreen||document.webkitExitFullscreen;
+const isFull=!!(document.fullscreenElement||document.webkitFullscreenElement);
+if(!req){this.checkLayout();return;}
+try{
+if(!isFull) await req.call(root);
+else if(exit) await exit.call(document);
+}catch(e){}
+this.checkLayout();
+},
+checkLayout:async function(){
+const isFull=!!(document.fullscreenElement || document.webkitFullscreenElement);
+
+/* 🔧 FIXED: Sync fullscreen state on both <html> and <body> */
+document.documentElement.classList.toggle("KingOfGods-fullscreen",isFull);
+document.body.classList.toggle("KingOfGods-fullscreen",isFull);
+
+const fsIcon=this.q("#KingOfGods-fs-icon");
+fsIcon && fsIcon.classList.toggle("KingOfGods-exit",isFull);
+
+const isDesktop=window.innerWidth>=1024;
+document.body.classList.toggle("KingOfGods-titan-scale",isFull && isDesktop);
+
+/* 🔧 FIXED: Update global scale var */
+this.updateScale();
+
+// WakeLock only in fullscreen + not safe-mode
+if(isFull && !this.isSafeMode){ this.requestWakeLock(); }
+else{ this.releaseWakeLock(); }
+},
+
+/* 🔧 FIXED: Stable scale calculation */
+updateScale:function(){
+if(this._scaleRAF){ cancelAnimationFrame(this._scaleRAF); }
+this._scaleRAF=requestAnimationFrame(()=>{
+const isFull = !!(document.fullscreenElement || document.webkitFullscreenElement);
+const rootStyle = getComputedStyle(document.documentElement);
+const bp = parseFloat(rootStyle.getPropertyValue("--bp-mobile")) || 520;
+const isMobile = window.innerWidth <= bp;
+  
+if(!isFull) {
+// Non-fullscreen: simple scaling
+const baseVar = isMobile ? "--stage-mobile" : "--stage-desktop";
+const baseW = parseFloat(rootStyle.getPropertyValue(baseVar)) || (isMobile ? 320 : 980);
+const stage = this.q("#KingOfGods-stage");
+const stageW = stage ? stage.getBoundingClientRect().width : baseW;
+  
+let scale = stageW / baseW;
+scale = Math.min(1.5, Math.max(0.8, scale));
+  
+// Snap to 1 to prevent jitter
+if(Math.abs(scale - 1) < 0.02) {
+  scale = 1;
+}
+  
+document.documentElement.style.setProperty("--KingOfGods-scale", scale.toFixed(3));
+return;
+}
+  
+// FULLSCREEN: ratio-locked calculation
+const hf = parseFloat(rootStyle.getPropertyValue("--hf")) || 60;
+const availH = window.innerHeight - (hf * 2);
+  
+// Get ratio based on screen size
+const ratio = isMobile ? 
+  parseFloat(rootStyle.getPropertyValue("--ratio-mobile")) || 1.684375 :
+  parseFloat(rootStyle.getPropertyValue("--ratio-desktop")) || 1.2234693878;
+  
+// Calculate stage width based on available height
+const stageW = Math.min(availH / ratio, window.innerWidth);
+  
+// Get base width for scaling
+const baseW = isMobile ? 
+  parseFloat(rootStyle.getPropertyValue("--stage-mobile")) || 320 :
+  parseFloat(rootStyle.getPropertyValue("--stage-desktop")) || 980;
+  
+let scale = stageW / baseW;
+  
+// Clamp scaling to prevent extreme sizes
+scale = Math.min(1.8, Math.max(0.7, scale));
+  
+// Snap near 1 to prevent sub-pixel jitter
+if(Math.abs(scale - 1) < 0.015) {
+  scale = 1;
+}
+  
+document.documentElement.style.setProperty("--KingOfGods-scale", scale.toFixed(3));
+  
+// Force a layout update
+this.checkLayout();
+});
+},
+render:function(viewId){
+const mount=this.q("#KingOfGods-app-mount");
+if(!mount) return;
+let content=(this.activeCartridge.views||{})[viewId];
+if(!content){
+content=`<h2>DATA CORRUPT</h2><div class="KingOfGods-status-text">[ ERR: VIEW '${viewId}' NOT FOUND ]</div><div class="KingOfGods-btn-grid"><button class="KingOfGods-btn KingOfGods-sfx-click" onclick="window.App&&App.navigate('dashboard')">RETURN ROOT</button></div>`;
+}
+mount.style.opacity=0;
+setTimeout(()=>{
+mount.innerHTML=content;
+mount.scrollTop=0;
+mount.style.opacity=1;
+if(this.activeCartridge.onView){try{this.activeCartridge.onView(viewId);}catch(e){console.error("onView failed:",e);}}
+},200);
+this.toggleDrawer(false);
+},
+navigate:function(viewId){
+if(!viewId||typeof viewId!=="string") viewId="dashboard";
+const next="#"+viewId;
+if(window.location.hash!==next) window.location.hash=next;
+else this.render(viewId);
+},
+startClock:function(){
+if(this.clockTimer) clearInterval(this.clockTimer);
+const update=()=>{
+const now=new Date();
+let hours=now.getHours();
+const minutes=now.getMinutes().toString().padStart(2,"0");
+const clock=this.q("#KingOfGods-clock-display");
+if(clock){
+if(!this.isMilitaryTime){
+const ampm=hours>=12?"PM":"AM";
+hours=hours%12;hours=hours?hours:12;
+clock.innerText=`${hours}:${minutes} ${ampm}`;
+}else{
+clock.innerText=`${hours.toString().padStart(2,"0")}:${minutes}`;
+}
+}
+const mm=(now.getMonth()+1).toString().padStart(2,"0");
+const dd=now.getDate().toString().padStart(2,"0");
+const yy=now.getFullYear().toString().slice(-2);
+const dateEl=this.q("#KingOfGods-footer-date");
+if(dateEl) dateEl.innerText=`${mm}/${dd}/${yy}`;
+};
+update();
+this.clockTimer=setInterval(update,1000);
+},
+toggleTime:function(){
+this.isMilitaryTime=!this.isMilitaryTime;
+localStorage.setItem(this.k("time_format"),this.isMilitaryTime?"military":"civilian");
+this.startClock();
+},
+spawnEmbers:function(){
+const c=this.q("#KingOfGods-ember-container");
+if(!c) return;
+c.innerHTML="";
+let count=50,durMod=1,sizeMod=1;
+if(["KingOfGods-theme-ice","KingOfGods-theme-void","KingOfGods-theme-cyber"].includes(this.currentTheme)){count=80;durMod=1.5;sizeMod=1.2;}
+else if(["KingOfGods-theme-toxic","KingOfGods-theme-matrix"].includes(this.currentTheme)){count=40;durMod=1.2;sizeMod=0.8;}
+for(let i=0;i<count;i++){
+const e=document.createElement("div");
+e.className="KingOfGods-ember";
+const baseDur=10+Math.random()*20;
+const wob=(Math.random()*60-30)+"px";
+e.style.setProperty("--x",Math.random()*100+"%");
+e.style.setProperty("--size",((2+Math.random()*4)*sizeMod)+"px");
+e.style.setProperty("--dur",(baseDur*durMod)+"s");
+e.style.setProperty("--del","-"+(Math.random()*20)+"s");
+e.style.setProperty("--wob",wob);
+c.appendChild(e);
+const e2=document.createElement("div");
+e2.className="KingOfGods-ember2";
+e2.style.setProperty("--x2",Math.random()*100+"%");
+e2.style.setProperty("--size",((2+Math.random()*4)*sizeMod)+"px");
+e2.style.setProperty("--dur2",(baseDur*durMod*1.05)+"s");
+e2.style.setProperty("--del","-"+(Math.random()*20)+"s");
+e2.style.setProperty("--wob",wob);
+c.appendChild(e2);
+}
+}
+};
+window.App=App;
+App.init({root:"#KingOfGods-shell"});
+/*(21)(E)🤬(APP CORE)🤬(E)(21)*/
+</script>
+</body>
+</html>
