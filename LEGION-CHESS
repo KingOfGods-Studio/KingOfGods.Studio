@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Legion Chess V3</title>
 /*-- 🎮♟️-(1A)-(S)-(SHELL-ROOT-BOOTSTRAP)-(LEGION-CHESS)-(S)-(1A)-♟️🎮 --*/
 (()=>{let LC=window.LEGION_CHESS||{};window.LEGION_CHESS=LC;
 
@@ -19278,6 +19276,5 @@ const start=()=>{try{LC.boot();}catch(e){console.error("LC.boot failed",e);}};
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start);
 else start();
 })();
-</script>
 </body>
 </html>
