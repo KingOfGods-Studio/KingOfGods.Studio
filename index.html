@@ -2301,10 +2301,14 @@ setTimeout(()=>this.hideStatus(),3500);
 }
 },
 
-processZip: async function(target){
-if(typeof JSZip === "undefined") { this.showStatus("ZIP ENGINE LOADING...", true); setTimeout(()=>this.hideStatus(), 1500); return; }
-try{
-if(!this._libsReady){
+processZip: async function(target) {
+if (typeof JSZip === "undefined") { 
+this.showStatus("ZIP ENGINE LOADING...", true); 
+setTimeout(() => this.hideStatus(), 1500); 
+return; 
+}
+try {
+if (!this._libsReady) {
 this.showStatus("LOADING TAG ENGINE...", true);
 await this._libsPromise;
 }
@@ -2312,57 +2316,63 @@ const album = this.state.displayAlbums[this.state.currentAlbumIdx] || {};
 const zip = new JSZip();
 const mainFolder = zip.folder(album.title || "Album");
 const now = new Date();
-
 this.showStatus("COMPRESSING ALBUM...");
-
 const addTrackToZip = async (folder, song, idx, total) => {
-if(!song || !song.url) return;
-this.showStatus(`ENCODING ${idx+1}/${total}: ${(song.title||"Track")}`);
-const trackInfo = {...song, trackNum: idx+1};
+if (!song || !song.url) return;
+this.showStatus(`ENCODING ${idx + 1}/${total}: ${(song.title || "Track")}`);
+// 🔧 FIXED: Create a robust trackInfo object to ensure trackNum persists
+const trackInfo = { ...song, trackNum: idx + 1 };
+// This function handles the WAV -> MP3 conversion and ID3 tagging
 const blob = await this.createTaggedBlob(trackInfo, album);
-const safeTitle = String(song.title || `Track ${idx+1}`).replace(/[\\/:*?"<>|]/g, "-");
-folder.file(`${this.pad(idx+1)}. ${safeTitle}.${this.getOutExt(song.url)}`, blob, {date: now});
-};
+// 🔧 FIXED: Sanitize title and force the "01. Title.mp3" format
+const safeTitle = String(song.title || `Track ${idx + 1}`).replace(/[\\/:*?"<>|]/g, "-");
+const finalFileName = `${this.pad(idx + 1)}. ${safeTitle}.${this.getOutExt(song.url)}`;
 
-// Sequential (prevents browser lock-ups on WAV->MP3)
-if(target === "ALL" && album.versions){
-for(const [verName, songs] of Object.entries(album.versions)){
+// Injecting the file into the ZIP folder with the explicit numbered filename
+folder.file(finalFileName, blob, { date: now });
+};
+// Execution Logic
+if (target === "ALL" && album.versions) {
+for (const [verName, songs] of Object.entries(album.versions)) {
 const list = songs || [];
 const subFolder = mainFolder.folder(`${album.title} - ${verName}`);
-for(let i=0;i<list.length;i++){
+for (let i = 0; i < list.length; i++) {
 await addTrackToZip(subFolder, list[i], i, list.length);
 }
 }
-} else if(album.versions && album.versions[target]){
+} else if (album.versions && album.versions[target]) {
 const list = album.versions[target] || [];
 const subFolder = mainFolder.folder(`${album.title} - ${target}`);
-for(let i=0;i<list.length;i++){
+for (let i = 0; i < list.length; i++) {
 await addTrackToZip(subFolder, list[i], i, list.length);
 }
 } else {
 const list = album.tracks || [];
-for(let i=0;i<list.length;i++){
+for (let i = 0; i < list.length; i++) {
 await addTrackToZip(mainFolder, list[i], i, list.length);
 }
 }
-
 this.showStatus("FINALIZING ZIP...");
-const out=await zip.generateAsync({type:"blob"});
+const out = await zip.generateAsync({ type: "blob" });
 const zipName = `${album.title || "Album"}.zip`;
-if(typeof saveAs !== "undefined") saveAs(out, zipName);
-else {
-const a=document.createElement("a"); const url=URL.createObjectURL(out);
-a.href=url; a.download=zipName; document.body.appendChild(a); a.click(); a.remove();
-setTimeout(()=>URL.revokeObjectURL(url),2000);
+if (typeof saveAs !== "undefined") {
+saveAs(out, zipName);
+} else {
+const a = document.createElement("a");
+const url = URL.createObjectURL(out);
+a.href = url;
+a.download = zipName;
+document.body.appendChild(a);
+a.click();
+a.remove();
+setTimeout(() => URL.revokeObjectURL(url), 2000);
 }
 this.hideStatus();
-}catch(e){
+} catch (e) {
 console.error(e);
 this.showStatus("ERROR: " + (e && e.message ? e.message : "ZIP FAILED"), true);
-setTimeout(()=>this.hideStatus(),3500);
-}
-}
-};
+setTimeout(() => this.hideStatus(), 3500);}
+}};
 /*-----Album List-----*/
 /* ----------(Almost Tripped Into Hell)---------- */
 window.HubAlbums.push({
